@@ -1,0 +1,83 @@
+\documentclass[twocolumn, a4paper, 10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{listings}
+\usepackage{makeidx}
+\usepackage[toc, page]{appendix}
+\usepackage{float}
+\usepackage{lscape}
+\usepackage{csquotes}
+\usepackage{soul}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\usepackage{pdfpages}
+\usepackage{caption}
+\usepackage{url}
+\lstset{
+    keywords={SELECT, WHERE, COLUMNS, ROWS, ON, MEMBER, WITH, FROM, ALL, CROSSJOIN, TOPCOUNT, ASC, DESC, AS, PARENT, CURRENTMEMBER, CHILDREN, PREVMEMBER, NEXTMEMBER, ORDER, RANK, GENERATE},
+    keywordstyle=\color{red}\bfseries
+}
+\usepackage{geometry}
+\usepackage{rotating}
+\usepackage[section]{placeins}
+\usepackage{chngcntr,array}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{dirtree}
+\usepackage[
+	breaklinks=true,
+	colorlinks=true,
+	linkcolor=blue,
+	urlcolor=blue,
+	citecolor=blue,
+	bookmarks=true,
+	bookmarksopenlevel=2
+]{hyperref}
+\usepackage{xcolor}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\title{
+    Supervised Learning
+}
+\author{
+    \href{mailto:brandon.alves@gatech.edu}{Brandon Alves}
+}
+\date{\today}
+
+\begin{document}
+    \maketitle
+    \tableofcontents
+	\listoffigures
+	\section{Introduction}
+		In this article, I will present the results of various Supervised Learning methods applied on two classification problems. Those methods will be:
+		\begin{itemize}
+			\item Decision Trees with some form of pruning
+			\item Neural Networks
+			\item Boosting
+			\item Support Vector Machines
+			\item K-Nearest Neighbors
+		\end{itemize}
+		For each of them, I will discuss the results obtained, the pros and cons, and the parameters that were used. I will also discuss the results obtained when applying the methods on the two datasets. At the end I will also compare the methods between them and highlight the best one for each dataset.
+	\section{Datasets}
+		In this article, I will use two datasets :
+		\begin{itemize}
+			\item \href{https://www.kaggle.com/code/sngkadam/credit-card-fraud-detection/data}{Credit Card Fraud}
+			\item \href{https://www.kaggle.com/c/the-insa-starcraft-2-player-prediction-challenge/data}{Starcreft II}
+		\end{itemize}
+		\subsection{Credit Card Fraud}
+			This dataset is a credit card fraud detection dataset. It contains a set of credit card transactions that were made by a customer. The dataset contains the following fields:
+		\subsection{Starcraft II}
+		\subsection*{Normalisation}
+	\section{Decision Trees with some form of pruning}
+	\section{Neural Networks}
+	\section{Boosting}
+	\section{Support Vector Machines}
+	\section{K-Nearest Neighbors}
+	\section{Conclusion}
+
+\end{document}
