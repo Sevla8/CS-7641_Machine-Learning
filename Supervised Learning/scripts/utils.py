@@ -10,7 +10,7 @@ from const import *
 
 def get_data(data_set, batch_format):
 	if data_set == "starcraft":
-		csv_dict = read_csv("data/train.csv")
+		csv_dict = read_csv("data/starcraft.csv")
 		players_dict, val_players_dict = split_training_set(csv_dict, VALIDATION_SPLIT)
 		if batch_format is "sklearn":
 			x_train, y_train = csv_set_to_sklearn_batch(players_dict)
