@@ -6,11 +6,19 @@ from sklearn.datasets import load_iris, load_breast_cancer
 from sklearn.model_selection import train_test_split
 from keras.utils.np_utils import to_categorical
 from collections import defaultdict, OrderedDict
-from const import *
+
+np.random.seed(6)
+
+NUMBER_OF_KEYS = 33
+NUMBER_OF_RACE = 3
+NUMBER_OF_OTHER_INFO = 1
+NUMBER_OF_PLAYERS = 200
+VALIDATION_SPLIT = 0.25
+GAME_TIME_STEP_LIMIT = 7000
 
 def get_data(data_set, batch_format):
 	if data_set == "starcraft":
-		csv_dict = read_csv("data/starcraft.csv")
+		csv_dict = read_csv("../data/starcraft.csv")
 		players_dict, val_players_dict = split_training_set(csv_dict, VALIDATION_SPLIT)
 		if batch_format is "sklearn":
 			x_train, y_train = csv_set_to_sklearn_batch(players_dict)
@@ -20,7 +28,7 @@ def get_data(data_set, batch_format):
 			x_test, y_test, _ = csv_set_to_keras_batch(val_players_dict)
 		x_train, y_train = shuffle(x_train, y_train, random_state=6)
 	elif data_set == "creditcard":
-		df = pd.read_csv("data/creditcard.csv", header=0)
+		df = pd.read_csv("../data/creditcard.csv", header=0)
 		data = df.drop('Class', axis=1).values
 		target = df.get('Class').values
 		target = target.reshape((len(target), 1))
@@ -43,16 +51,7 @@ def get_data(data_set, batch_format):
 			y_train = to_categorical(y_train)
 			y_test = to_categorical(y_test)
 	else:
-		if data_set == "iris":
-			data = load_iris()
-		elif data_set == "cancer":
-			data = load_breast_cancer()
-		else:
-			raise ValueError("%s data set is not implemented" % data_set)
-		x_train, x_test, y_train, y_test = train_test_split(data.data, data.target, test_size=VALIDATION_SPLIT, shuffle=True)
-		if batch_format is "keras":
-			y_train = to_categorical(y_train)
-			y_test = to_categorical(y_test)
+		raise ValueError("%s data set is not implemented" % data_set)
 	print("Selected data set is", data_set, "with", len(y_train) + len(y_test), "data (train:", len(y_train), ", test:", len(y_test), ")")
 	x_train, x_test = normalize_x_data(np.array(x_train), np.array(x_test))
 	return x_train, np.array(y_train), x_test, np.array(y_test)

@@ -1,4 +1,4 @@
-\documentclass[twocolumn, a4paper, 10pt]{article}
+\documentclass[10pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -55,33 +55,35 @@
 
 \begin{document}
 	\maketitle
+	% \newpage
 	\tableofcontents
-	% \listoffigures
+	\listoffigures
+	\newpage
 	\section{Introduction}
-		In this article, I will present the results of various Supervised Learning methods applied on two classification problems. Those methods are :
+		In this article, I will present the results of various Supervised Learning methods applied on two classification problems. Those methods are:
 		\begin{itemize}
-			\item Decision Trees with some form of pruning
-			\item Neural Networks
-			\item Boosting
-			\item Support Vector Machines
-			\item K-Nearest Neighbors
+			\item Decision Trees with some form of pruning;
+			\item Neural Networks;
+			\item Boosting;
+			\item Support Vector Machines;
+			\item K-Nearest Neighbors.
 		\end{itemize}
 		For each of them, I will discuss the results obtained, the pros and cons of using them, and the parameters that were used. I will also discuss the results when applying the methods on the two different datasets. At the end I will also compare the methods between them and highlight the best one for each dataset.
 
 		I will present many plots on this report to show the evolution of the accuracy depending on some parameters. Those plots will be presented in the following way : the hard line represents the median precision value for a given parameter value while the tint area goes from the minimum to the maximum precision value for the given parameter value.
 		% The error bar graph will follow the same convention with the center point representing the median value and the error bar going from minimum to maximum values.
 
-		The experiments on this report were performed on a computer with the following specifications :
+		The experiments on this report were performed on a computer with the following specifications:
 		\begin{itemize}
 			\item CPU : Intel(R) Core(TM) i7-9750H CPU @ 2.60GHz, 6 cores, 12 threads
 			\item RAM : 16GB DDR4
 			\item GPU : NVIDIA Quadro P620
 		\end{itemize}
 	\section{Datasets}
-		In this article, I will learn over two datasets :
+		In this article, I will learn over two datasets:
 		\begin{itemize}
-			\item \href{https://www.kaggle.com/code/sngkadam/credit-card-fraud-detection/data}{Credit Card Fraud}
-			\item \href{https://www.kaggle.com/c/the-insa-starcraft-2-player-prediction-challenge/data}{Starcraft II}
+			\item \href{https://www.kaggle.com/code/sngkadam/credit-card-fraud-detection/data}{Credit Card Fraud};
+			\item \href{https://www.kaggle.com/c/the-insa-starcraft-2-player-prediction-challenge/data}{Starcraft II}.
 		\end{itemize}
 		\subsection*{Credit Card Fraud}
 			This dataset is a credit card fraud detection dataset. The dataset contains transactions made by credit cards in September 2013 by European cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172\% of all transactions. It contains only numerical input variables which are the result of a PCA transformation. The only features which have not been transformed with PCA are \textit{Time} and \textit{Amount}. Feature \textit{Time} contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature \textit{Amount} is the transaction amount. Feature \textit{Class} is the response variable and it takes value 1 in case of fraud and 0 otherwise.
@@ -112,13 +114,14 @@
 
 		\begin{figure}[]
 			\centering
-			\begin{subfigure}[]{0.8\columnwidth}
+			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
 				\includegraphics[width=\linewidth]{../graphics/tree_creditcard_max_depth_score_type_score_type.png}
 				\caption{Accuracy for train and test credit-card datasets}
 				\label{tree:cc_train_vs_test}
 			\end{subfigure}
-			\begin{subfigure}[]{0.8\columnwidth}
+			~
+			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
 				\includegraphics[width=\linewidth]{../graphics/tree_starcraft_max_depth_score_type_score_type.png}
 				\caption{Accuracy for train and test Starcraft datasets}
@@ -134,13 +137,14 @@
 
 		\begin{figure}[]
 			\centering
-			\begin{subfigure}[]{0.8\columnwidth}
+			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
 				\includegraphics[width=\linewidth]{../graphics/tree_creditcard_max_depth_score_type_train_limit.png}
 				\caption{Accuracy for train and test credit-card datasets}
 				\label{tree:cc_train_size_score_type_score_type}
 			\end{subfigure}
-			\begin{subfigure}[]{0.8\columnwidth}
+			~
+			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
 				\includegraphics[width=\linewidth]{../graphics/tree_starcraft_max_depth_score_type_train_limit.png}
 				\caption{Accuracy for train and test Starcraft datasets}
@@ -158,13 +162,14 @@
 
 		\begin{figure}[]
 			\centering
-			\begin{subfigure}[]{0.8\columnwidth}
+			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
 				\includegraphics[width=\linewidth]{../graphics/tree_creditcard_min_samples_split_score_type_train_limit.png}
 				\caption{Accuracy for train and test credit-card datasets}
 				\label{tree:tree_creditcard_min_samples_split_score_type_train_limit}
 			\end{subfigure}
-			\begin{subfigure}[]{0.8\columnwidth}
+			~
+			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
 				\includegraphics[width=\linewidth]{../graphics/tree_starcraft_min_samples_split_score_type_train_limit.png}
 				\caption{Accuracy for train and test Starcraft datasets}
@@ -174,38 +179,165 @@
 			\label{tree:min_samples_split_score_type_score_type}
 		\end{figure}
 	\section{Neural Networks}
+		Neural Network model is the most complicated in terms of parameters in comparison with the other models. We will discuss the influence of the followings:
+		\begin{itemize}
+			\item The number of epochs;
+			\item The use of batch normalization;
+			\item The number of layers;
+			\item The activation function;
+			\item The size of the training set.
+		\end{itemize}
+
+		The first thing to say is that our Neural Network classifier does not perform as well as espected with all the parameters explored. For example in the second dataset, in figure \ref{per_sc_train_vs_test}, our classifier difficulty scores above 0.5. As expected the accuracy goes up with the number of epochs.
+
+		\begin{figure}
+			\centering
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/per_creditcard_epoch_score_type_score_type_full.png}
+				\caption{Accuracy for the train and test dataset on credit-card}
+				\label{per_cc_train_vs_test}
+			\end{subfigure}
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/per_starcraft_epoch_score_type_score_type_full.png}
+				\caption{Accuracy for the train and test dataset on Starcraft}
+				\label{per_sc_train_vs_test}
+			\end{subfigure}
+			\caption{Evolution of the neural network classifier accuracy according to thenumber of epochs}
+			\label{per_train_vs_test}
+		\end{figure}
+
+		The parameter that affects the most the accuracy of the calssifier is the use of a batch normalization as we can see on figure \ref{per_cc_bn} and \ref{per_sc_bn}. We know that the use of a batch normalization permits to decrease the number of training epochs required to train a neural network. We can see on figures \ref{per_bn} it decreases drastically the number of epochs.
+
+		\begin{figure}
+			\centering
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/per_creditcard_epoch_score_type_use_batch_norm.png}
+				\caption{Accuracy with and without batch normalization for credit-card}
+				\label{per_cc_bn}
+			\end{subfigure}~
+				\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/per_starcraft_epoch_score_type_use_batch_norm.png}
+				\caption{Accuracy with and without batch normalization for Starcraft}
+				\label{per_sc_bn}
+			\end{subfigure}
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering \includegraphics[width=\linewidth]{../graphics/per_creditcard_epoch_score_type_score_type.png}
+				\caption{Accuracy for the train and test dataset on credit-card, with batch normalization}
+				\label{per_cc_train_vs_test_bn}
+			\end{subfigure}~
+				\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/per_starcraft_epoch_score_type_score_type.png}
+				\caption{Accuracy for the train and test dataset on Starcraft, with batch normalization}
+			\label{per_sc_train_vs_test_bn}
+		\end{subfigure}
+		\caption{Evolution of the neural network classifier accuracy according to the use of batch normalization}
+		\label{per_bn}
+		\end{figure}
+
+		The impact of the activation function is not as important as the batch normalization. We can see on figure \ref{per_cc_act} and \ref{per_sc_act} that the accuracy is not very different between the different activation functions expected for the sigmoid function on figure \ref{per_cc_act}.
+
+		Another parameter that affected the score of the classifier was the number of layers. We can see on figures \ref{per_cc_layers} and \ref{per_sc_layers} that for both datasets, the accuracy depends on the layers. One interesting thing to notice is that for Starcraft dataset, the best fit is obtained for no intermediate layers (output neurones directly connected to input) while for credit-card dataset, that configuration gives very poor results.
+
+		One interesting thing in that case is that the training size does not seem to have a big impact on the classification score. We can see on figure \ref{per_cc_tl} and \ref{per_sc_tl} that the accuracy is not very different between the different training sizes. For example we have pretty much the same accuracy for a 1000 and a 160000 training size.
+
+		\begin{figure}
+			\centering
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/per_creditcard_epoch_score_type_layers.png}
+				\caption{Accuracy for different layers on credit-card}
+				\label{per_cc_layers}
+			\end{subfigure}~
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/per_creditcard_epoch_score_type_activation.png}
+				\caption{Accuracy for different activations on credit-card}
+				\label{per_cc_act}
+			\end{subfigure}
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/per_creditcard_epoch_score_type_train_limit.png}
+				\caption{Accuracy for different training dataset size on credit-card}
+				\label{per_cc_tl}
+			\end{subfigure}~
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/per_starcraft_epoch_score_type_layers.png}
+				\caption{Accuracy for different layers on Starcraft}
+				\label{per_sc_layers}
+			\end{subfigure}
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/per_starcraft_epoch_score_type_activation.png}
+				\caption{Accuracy for different activations on Starcraft}
+				\label{per_sc_act}
+			\end{subfigure}~
+				\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/per_starcraft_epoch_score_type_train_limit.png}
+				\caption{Accuracy for different training dataset size on Starcraft}
+				\label{per_sc_tl}
+			\end{subfigure}
+			\caption{Evolution of the neural network classifier accuracy for different parameters}
+			\label{per}
+		\end{figure}
+
+		In terms of computation time, our Neural Network classifier is the slower one. In addition, the memory used in the learning process was also very high. It took 2h30m to train the neural network on both datasets.
+
+		I saw that it was not easy to find a good configuration for the neural network for all these parameters to get good results.
+
 	\section{Boosting}
+		Let's now discuss the influence of the followings parameters on the accuracy of the Boosting classifier:
+		\begin{itemize}
+			\item The number of boosting stages to perform;
+			\item The maximum depth of an individual regression estimator;
+			\item The minimum number of sample needed to split a node of an estimator;
+			\item The size of the training set.
+		\end{itemize}
 	\section{Support Vector Machines}
+		In this section we will discuss about the Support Vector Machines classifier. We will see the influence of the followings parameters:
+		\begin{itemize}
+			\item The penalty of the error term;
+			\item The kernel function;
+			\item The training set size.
+		\end{itemize}
 	\section{K-Nearest Neighbors}
 		Here I will discuss the results obtained using a K-Nearest Neighbors classifier. We will see the influence on the accuracy of the classifier of :
 		\begin{itemize}
-			\item The number of neighbors
-			\item The distance metric (p-norm)
-			\item The size of the training set
+			\item The number of neighbors;
+			\item The distance metric (p-norm);
+			\item The size of the training set.
 		\end{itemize}
 		By design, the accuracy on the training set is always 100\% for KNN, so I will not display it on the plots.
 
 		\begin{figure}
 			\centering
-			\begin{subfigure}[]{0.8\columnwidth}
+			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
 				\includegraphics[width=\linewidth]{../graphics/knn_creditcard_neighbors.png}
 				\caption{Evolution of accuracy according to the number of neighbors used for the classification on the credit-card fraud dataset, with $train\_limit=90000$}
 				\label{knn:knn_cc_neighbors}
 			\end{subfigure}
-			\begin{subfigure}[]{0.8\columnwidth}
+			~
+			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
 				\includegraphics[width=\linewidth]{../graphics/knn_starcraft_neighbors.png}
 				\caption{Evolution of accuracy according to the number of neighbors used for the classification on the Starcraft dataset, with $train\_limit=2000$}
 				\label{knn:knn_sc_neighbors}
 			\end{subfigure}
-			\begin{subfigure}[]{0.8\columnwidth}
+			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
 				\includegraphics[width=\linewidth]{../graphics/knn_creditcard_train_limit.png}
 				\caption{Evolution of accuracy according to the number of training examples on the credit-card fraud dataset, with $n\_neighbors=1$}
 				\label{knn:knn_cc_train_limit}
 			\end{subfigure}
-			\begin{subfigure}[]{0.8\columnwidth}
+			~
+			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
 				\includegraphics[width=\linewidth]{../graphics/knn_starcraft_train_limit.png}
 				\caption{Evolution of accuracy according to the number of training examples on the Starcraft dataset, with $n\_neighbors=1$}
