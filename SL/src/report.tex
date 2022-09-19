@@ -82,102 +82,96 @@
 	\section{Datasets}
 		In this article, I will learn over two datasets:
 		\begin{itemize}
-			\item \href{https://www.kaggle.com/code/sngkadam/credit-card-fraud-detection/data}{Credit Card Fraud};
-			\item \href{https://www.kaggle.com/c/the-insa-starcraft-2-player-prediction-challenge/data}{Starcraft II}.
+			\item \href{https://www.kaggle.com/datasets/elakiricoder/gender-classification-dataset}{Gender Classification};
+			\item \href{https://www.kaggle.com/code/sngkadam/credit-card-fraud-detection/data}{Credit Card Fraud Detection}.
 		\end{itemize}
-		\subsection*{Credit Card Fraud}
+		\subsection*{Gender Classification}
+			This dataset describes some appearence characteritics. It contains 7 features and one output. The features are: long hair, width of the forehead, height of the forehead, wide nose, long nose, thin lips and the distance between nose and lips. The output feature is gender and takes value 1 for male and 0 for female. That dataset is not the most complicated. I thought it would be a good idea to start with a simple dataset to get a better understanding of the methods. It is also a good idea to start with a dataset that is not too big to avoid long training times.
+		\subsection*{Credit Card Fraud Detection}
 			This dataset is a credit card fraud detection dataset. The dataset contains transactions made by credit cards in September 2013 by European cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172\% of all transactions. It contains only numerical input variables which are the result of a PCA transformation. The only features which have not been transformed with PCA are \textit{Time} and \textit{Amount}. Feature \textit{Time} contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature \textit{Amount} is the transaction amount. Feature \textit{Class} is the response variable and it takes value 1 in case of fraud and 0 otherwise.
-
-			The training dataset contains between 10 000 and 210 000 transactions to evaluate how the training size can impact the results of the leaning process. The test dataset contains 236 transactions from the remaining samples that are not in the testing set. Half of the test dataset is composed of frauds and half of it is composed of non-fraud transactions. I have chosen that ratio in order to compare the ressults of the two datasets.
-		\subsection*{Starcraft II}
-			This dataset is composed of recorded competition games from the Starcraft II game. For each games, the dataset provides the player name and the player actions at a given time for a set of 30 different actions. The purpose is to find the player names having only the actions recorded.
-
-			To allow all the medels to use that dataset, a number of feature is precomputed on it, such as the first time of each action or the average action per minute rate. This sum up into 72 different features for 200 class splits on 1950 games on the training set and 884 on the testing one. The training and testing set are constructed so that the same proportion are applied to each class to ensure that every class are represented on both datasets. The train dataset is then randomly flushed to allow to crop it for training and still have the possibility to have every class.
-
-			The difficulty of this dataset is in hight number of different classes and the few numbers of example. There is 24 classes of the data set that have only 1 example to train from with an average of less than 10 per class. In addition, the dataset is noisy, some players appear under more than one pseudo and so some classes are very similar.
-
 		\subsection*{Scaling}
-			Some methods require the data to be scaled between 0 and 1. Both the training and the testing datasets are scaled between 0 and 1. The scaling is done by dividing each value by the maximum value of the dataset. The scaling is done on the training dataset and then applied on the testing dataset.
-	\section{Decision Trees with some form of pruning}
-		In that section I will present the results obtained when using Decision Trees with some form of pruning. We will here discuss the influence of different parameters :
+			Some methods require the data to be scaled between 0 and 1. It also permits computation to be faster. Both the training and the testing datasets are scaled between 0 and 1. The scaling is done by dividing each value by the maximum value of the dataset. The scaling is done on the training dataset and then applied on the testing dataset.
+	\section{Decision Trees}
+		In that section I will present the results obtained when using Decision Trees with pruning. We will here discuss the influence of different parameters :
 		\begin{itemize}
 			\item The maximum depth of the tree;
 			\item The minimum number of samples required to split an internal node;
 			\item The size of the training set.
 		\end{itemize}
 
-		We begin by finding the limit of our classifier. That limit can be of two natures : overfiting or a flat level on both training and test accuracy. Figure \ref{tree:train_vs_test} represents those limits.
-
-		On figure \ref{tree:cc_train_vs_test}, we can see that the Decision Tree method quickly overfits. Indeed the training accuracy quickly rise above 99\% while the test accuracy decreases to reach around 0.87\%. We can notice that the best score is obtained for a maximum depth value of 1. Also the score considerably decreases for a maximum depth value of bigger than 3. therefore we can conclude that only 1 out of the 28 dimensions of the input space is relevant for the classification output.
-
-		On figure \ref{tree:sc_train_vs_test}, we can notice that the classifier does not overfit. Although the training accuracy sometimes succeeds to reach 100\%, the test accuracy stays on a flat level around 0.75\%, meaning that increasing the maximum depth further does not impact the score of the classifier.
-
 		\begin{figure}[]
 			\centering
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/tree_gender_max_depth_score_type_score_type.png}
+				\caption{Accuracy for train and test Gender datasets}
+				\label{tree:gender_train_vs_test}
+			\end{subfigure}
+			~
 			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
 				\includegraphics[width=\linewidth]{../graphics/tree_creditcard_max_depth_score_type_score_type.png}
-				\caption{Accuracy for train and test credit-card datasets}
-				\label{tree:cc_train_vs_test}
+				\caption{Accuracy for train and test Credit-Card datasets}
+				\label{tree:creditcard_train_vs_test}
 			\end{subfigure}
-			~
-			\begin{subfigure}[]{0.45\columnwidth}
-				\centering
-				\includegraphics[width=\linewidth]{../graphics/tree_starcraft_max_depth_score_type_score_type.png}
-				\caption{Accuracy for train and test Starcraft datasets}
-				\label{tree:sc_train_vs_test}
-			\end{subfigure}
-			\caption{Evolution of the decision tree classifier accuracy according to the maximum depth of the tree}
+			\caption{Evolution of the Decision Tree Classifier accuracy according to the Maximum Depth of the tree}
 			\label{tree:train_vs_test}
 		\end{figure}
 
-		Let's discuss now the influence of the size of the training set on the accuracy of the classifier. Figure \ref{tree:train_size_score_type_score_type} represents the accuracy of the classifier according to the size of the training set for the credit-card dataset. As expected the accuracy of the classifier decreases when the size of the training set decreases. The accuracy of the classifier is also impacted by the maximum depth of the tree. Indeed, the score for all the different sizes of the training set is almost the same when the maximum depth is around 1, whereas the score differs a lot when the maximum depth of the tree increases. We can also notice that the training set with 160 000 samples gives better results than the trainingset with 210 000 samples. This is probably due to the fact that the training set with 160 000 samples is more balanced than the training set with 210 000 samples, meaning that when adding those 50 000 samples, we probably introduce some noise in the training set.
+		We begin by finding the limit of our classifier. That limit can be of two natures : overfiting or a flat level on both training and test accuracy. Figure \ref{tree:train_vs_test} represents those limits. On figure \ref{tree:creditcard_train_vs_test}, we can see that the Decision Tree method quickly overfits. Indeed the training accuracy quickly rise above 99\% while the test accuracy decreases to reach around 0.87\%. We can notice that the best score is obtained for a maximum depth value of 5. Also the score considerably decreases for a maximum depth value of bigger than 5. therefore we can conclude that only 5 out of the 28 dimensions of the input space is relevant for the classification output.
 
-		On the Starcraft sataset, we can see on figure \ref{tree:sc_train_size_score_type_score_type} that the accuracy of the classifier is also impacted by the size of the training set. Once again on that dataset there is no overfitting in the learning process. We can notice that the evolution of the gap between each step seems to evolve exponentially. But that comportment is mostly due to the classes not represented on the training set when dealing with few randomly chosen data for training. The standard deviation of accuracy is also reduced by the augmentation of the training set size. Indeed, the more data we consider, the less important fine-tuning the meta parameters is : the classifier will learn the best way to use that parameters and will so end up with similar results than another classifier with slightly different parameters.
+		On figure \ref{tree:gender_train_vs_test}, we can notice that the classifier does not overfit. It is interesting to constat the score for the testing dataset happens to be better than the score for the training dataset. This is probably due to the fact that the dataset is not too big. We can also notice that the best score is obtained for a maximum depth value of 7 which means that all the dimensions of the input space are relevant for the classification output.
 
 		\begin{figure}[]
 			\centering
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/tree_gender_max_depth_score_type_train_limit.png}
+				\caption{Accuracy for train and test Gender datasets}
+				\label{tree:gender_train_size_score_type_score_type}
+			\end{subfigure}
+			~
 			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
 				\includegraphics[width=\linewidth]{../graphics/tree_creditcard_max_depth_score_type_train_limit.png}
-				\caption{Accuracy for train and test credit-card datasets}
-				\label{tree:cc_train_size_score_type_score_type}
+				\caption{Accuracy for train and test Credit-Card datasets}
+				\label{tree:creditcard_train_size_score_type_score_type}
 			\end{subfigure}
-			~
-			\begin{subfigure}[]{0.45\columnwidth}
-				\centering
-				\includegraphics[width=\linewidth]{../graphics/tree_starcraft_max_depth_score_type_train_limit.png}
-				\caption{Accuracy for train and test Starcraft datasets}
-				\label{tree:sc_train_size_score_type_score_type}
-			\end{subfigure}
-			\caption{Evolution of the decision tree classifier accuracy according to the size of the training set}
+			\caption{Evolution of the Decision Tree Classifier accuracy according to the Size of the training set}
 			\label{tree:train_size_score_type_score_type}
 		\end{figure}
 
-		The last parameter I will discuss is the minimum number of samples required to split an internal node. That variation is displayed on figure \ref{tree:min_samples_split_score_type_score_type}. In the case of the credit-card dataset, we can see that the accuracy of the classifier is only impacted by the minimum number of samples required to split an internal node when overfiting. In Starcraft dataset, we see that this paramet has a little influence even if smaller than the over parameters.  In that particular case, this sort of pruning only led to decrease the accuracy of the classifier on the test set. This is probably caused by sometimes the very few data available per class, and at the same time do not prevent overfitting as the only overfitting possible here is due to the few data available.
+		Let's discuss now the influence of the size of the training set on the accuracy of the classifier. Figure \ref{tree:train_size_score_type_score_type} represents the accuracy of the classifier according to the size of the training set for both datasets. As expected the accuracy of the classifier increases when the size of the training set increases. The accuracy of the classifier is also impacted by the maximum depth of the tree. Indeed, the score for all the different sizes of the training set is almost the same when the maximum depth is around 1, whereas the score differs a lot when the maximum depth of the tree increases. We can also notice that the training set with 160 000 samples gives better results than the trainingset with 210 000 samples in figure \ref{tree:creditcard_train_size_score_type_score_type}. This is probably due to the fact that the training set with 160 000 samples is more balanced than the training set with 210 000 samples, meaning that when adding those 50 000 samples, we probably introduce some noise in the training set.
 
-		Decision Tree is the faster method compared with all the other ones. To get those results and generate the data associated with, it took 28 seconds. The full run coun 208 leanr and test cycles, which gives an average of 279 milliseconds per cycle. That is two time faster than KNN.
-
-		The decision tree classifier performs pretty well as seen above. But that method does not perform very well on highly dimensional datasets. To resolve that problem, Random Forrest can be used. Random Forrest is a method that uses multiple decision trees to classify the data. The method is based on the idea that a large number of relatively uncorrelated classifiers (trees) operating as a committee will outperform any of the individual classifiers. The method is also known as bagging.
+		On the Gender dataset, we can see on figure \ref{tree:gender_train_size_score_type_score_type} that the accuracy of the classifier is also impacted by the size of the training set. The best score of the classifier is for a training set of 2 000 samples. We can also notice that the score is almost the same for a maximum depth between 1 and 5. This means that the training set size as more inpact on the classifier when the maximum depth of the tree is high.
 
 		\begin{figure}[]
 			\centering
 			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
-				\includegraphics[width=\linewidth]{../graphics/tree_creditcard_min_samples_split_score_type_train_limit.png}
-				\caption{Accuracy for train and test credit-card datasets}
-				\label{tree:tree_creditcard_min_samples_split_score_type_train_limit}
+				\includegraphics[width=\linewidth]{../graphics/tree_gender_min_samples_split_score_type_train_limit.png}
+				\caption{Accuracy for train and test Gender datasets}
+				\label{tree:tree_gender_min_samples_split_score_type_train_limit}
 			\end{subfigure}
 			~
 			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
-				\includegraphics[width=\linewidth]{../graphics/tree_starcraft_min_samples_split_score_type_train_limit.png}
-				\caption{Accuracy for train and test Starcraft datasets}
-				\label{tree:tree_starcraft_min_samples_split_score_type_train_limit}
+				\includegraphics[width=\linewidth]{../graphics/tree_creditcard_min_samples_split_score_type_train_limit.png}
+				\caption{Accuracy for train and test Credit-Card datasets}
+				\label{tree:tree_creditcard_min_samples_split_score_type_train_limit}
 			\end{subfigure}
-			\caption{Evolution of the decision tree classifier accuracy according to minimum number of samples required to split an internal node}
+			\caption{Evolution of the Decision Tree Classifier accuracy according to Minimum Number of Samples required to split an internal node}
 			\label{tree:min_samples_split_score_type_score_type}
 		\end{figure}
+
+		The last parameter I will discuss is the minimum number of samples required to split an internal node. That variation is displayed on figure \ref{tree:min_samples_split_score_type_score_type}.
+		In the Gender dataset, we see that this parameter has some influence. First of all we can see that this parameter lead to overfiting. In the case of the training set composed of 2 000 samples, the classifier overfits for a minimum sample split bigger than 17. But it also improve the results for all the training set sizes, when the minimum sample split is not too high.
+
+		In the case of the Credit-Card dataset, we can see that the accuracy of the classifier is not really impacted by the minimum number of samples required to split an internal node except for the smaller datatset. Which have sense. Indeed, the smaller the dataset is the one with the biggest chance of improvment.
+
+		Decision Tree is the faster method compared with all the other ones. To get those results and generate the data associated with, it took around 10 minutes.
+
+		The decision tree classifier performs pretty well as seen above. But that method does not perform very well on highly dimensional datasets. To resolve that problem, Random Forrest can be used. Random Forrest is a method that uses multiple decision trees to classify the data. The method is based on the idea that a large number of relatively uncorrelated classifiers (trees) operating as a committee will outperform any of the individual classifiers. That method is also known as bagging.
 	\section{Neural Networks}
 		Neural Network model is the most complicated in terms of parameters in comparison with the other models. We will discuss the influence of the followings:
 		\begin{itemize}
@@ -307,7 +301,7 @@
 			\item The training set size.
 		\end{itemize}
 	\section{K-Nearest Neighbors}
-		Here I will discuss the results obtained using a K-Nearest Neighbors classifier. We will see the influence on the accuracy of the classifier of :
+		Here I will discuss the results obtained using a K-Nearest Neighbors classifier. We will see the influence on the accuracy of the classifier of:
 		\begin{itemize}
 			\item The number of neighbors;
 			\item The distance metric (p-norm);
@@ -319,45 +313,44 @@
 			\centering
 			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
-				\includegraphics[width=\linewidth]{../graphics/knn_creditcard_neighbors.png}
-				\caption{Evolution of accuracy according to the number of neighbors used for the classification on the credit-card fraud dataset, with $train\_limit=90000$}
-				\label{knn:knn_cc_neighbors}
+				\includegraphics[width=\linewidth]{../graphics/knn_gender_neighbors.png}
+				\caption{Evolution of the accuracy according to the number of neighbors on Gender dataset, with $train\_limit = 2000$}
+				\label{knn:g_neighbors}
 			\end{subfigure}
 			~
 			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
-				\includegraphics[width=\linewidth]{../graphics/knn_starcraft_neighbors.png}
-				\caption{Evolution of accuracy according to the number of neighbors used for the classification on the Starcraft dataset, with $train\_limit=2000$}
-				\label{knn:knn_sc_neighbors}
+				\includegraphics[width=\linewidth]{../graphics/knn_creditcard_neighbors.png}
+				\caption{Evolution of accuracy according to the number of neighbors on Credit-Card dataset, with $train\_limit = 90000$}
+				\label{knn:cc_neighbors}
 			\end{subfigure}
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/knn_gender_train_limit.png}
+				\caption{Evolution of accuracy according to the number of training examples on Gender dataset, with $n\_neighbors = 13$}
+				\label{knn:g_train_limit}
+			\end{subfigure}
+			~
 			\begin{subfigure}[]{0.45\columnwidth}
 				\centering
 				\includegraphics[width=\linewidth]{../graphics/knn_creditcard_train_limit.png}
-				\caption{Evolution of accuracy according to the number of training examples on the credit-card fraud dataset, with $n\_neighbors=1$}
-				\label{knn:knn_cc_train_limit}
+				\caption{Evolution of accuracy according to the number of training examples on Credit-Card dataset, with $n\_neighbors = 1$}
+				\label{knn:cc_train_limit}
 			\end{subfigure}
-			~
-			\begin{subfigure}[]{0.45\columnwidth}
-				\centering
-				\includegraphics[width=\linewidth]{../graphics/knn_starcraft_train_limit.png}
-				\caption{Evolution of accuracy according to the number of training examples on the Starcraft dataset, with $n\_neighbors=1$}
-				\label{knn:knn_sc_train_limit}
-			\end{subfigure}
-			\caption{Evolution of the KNN classifier on the test set with different parameters}
+			\caption{Evolution of the K-NN Classifier accuracy on the Test Set for different parameters}
 			\label{knn:knn}
 		\end{figure}
 
 		On figure \ref{knn:knn}, I present the effect of those parameters on the classification score.
-		First, we can notice that the norm used for the distance metric has a consequent influence on the classification accuracy. The accuracy is better when using the Manhattan norm ($p = 1$). This is not a surprise as higher norm are generally inadequate to measure distances on highly dimensional spaces.
+		For the Credit-Card dataset, we can notice that the norm used for the distance metric has a consequent influence on the classification accuracy. The accuracy is better when using the Manhattan norm ($p = 1$). This is not a surprise as higher norm are generally inadequate to measure distances on highly dimensional spaces. In the case of the Gender datatset, the norm used doesn't seem to have a big influence on the accuracy.
 
-		On figures \ref{knn:knn_cc_neighbors} and \ref{knn:knn_sc_neighbors}, we can see that the accuracy of the classifier is better for a small number of neighbors. This is not a surprise as both datasets have very few examples in each classes. KNN is a non-parametric classifier. It is not able to generalize the data, so it is better to use a small number of neighbors. We usually increase the research perimeter to be more resilient to noise but here the data do not allow us such a liberty. This is particularly true in the
-		credit card dataset where the fraud are really close to legal transactions.
+		On figures \ref{knn:cc_neighbors} we can see that the accuracy of the classifier is better for a small number of neighbors. K-NN is a non-parametric classifier. It is not able to generalize the data, so it is better to use a small number of neighbors. We usually increase the research perimeter to be more resilient to noise but here the data do not allow us such a liberty. This is particularly true in the Credit-Card dataset where the fraud are really close to legal transactions. On figure \ref{knn:g_neighbors}, we can see that the accuracy is better for a number of neighbors bigger than 3. In the case of the Gender dataset, the data are more separated and we can afford to increase the number of neighbors.
 
-		On figures \ref{knn:knn_cc_train_limit} and \ref{knn:knn_sc_train_limit}, we can see that the accuracy of the classifier is better for an important number of training examples. Also the learning process don't overfit. However, on figure \ref{knn:knn_cc_train_limit}, for the credit-card datatset, we notice that there is a flat zone where the accuracy is pretty much constant. This is due to the fact that the number of frauds is very low compared to the number of legal transactions. I imagine that the samples added to the training set during that flat are mostly similar to previous ones. This is why the accuracy is not really increasing.
+		On figures \ref{knn:cc_train_limit}, we can see that the accuracy of the classifier is better for an important number of training examples. Also the classifier doesn't overfit. On figure \ref{knn:g_train_limit}, we can see that the accuracy decreases for a number of training examples between 1 000 and 1 500. But it keeps having a very good score. I don't really know why. Maybe the samples introduced where not well representative of the data.
 
-		Concerning time efficiency, the KNN classifier achieve a correct performance. On the Starcraft dataset, it takes 2m31s to run 280 times the learn and test process with the parameters explored above. KNN uses multiple thread to perform the classification task.
+		Concerning time efficiency, the K-NN classifier achieve a correct performance. To get those results and generate the data associated with, it took around 25 minutes.
 
-		In comparison with the other methods, KNN does not perform very well. Having a discussion with an expert of the dataset would be a godd idea for designing a distance metric that is better suited to the problem. Indeed, the distance metric is the key to the success of KNN. So it is important to choose the most appropriate one.
+		In comparison with the other methods, K-NN didn't  perform well on the Credit-Card dataset. Having a discussion with an expert of the dataset would be a good idea for designing a distance metric that is better suited to the problem. Indeed, the distance metric is the key to success with K-NN. So it is important to choose the most appropriate one.
 	\section{Conclusion}
 
 \end{document}
