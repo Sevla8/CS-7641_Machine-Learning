@@ -55,7 +55,6 @@
 
 \begin{document}
 	\maketitle
-	% \newpage
 	\tableofcontents
 	\listoffigures
 	\newpage
@@ -87,7 +86,7 @@
 		\end{itemize}
 		\subsection*{Gender Classification}
 			This dataset describes some appearence characteritics. It contains 7 features and one output. The features are: long hair, width of the forehead, height of the forehead, wide nose, long nose, thin lips and the distance between nose and lips. The output feature is gender and takes value 1 for male and 0 for female. That dataset is not the most complicated. I thought it would be a good idea to start with a simple dataset to get a better understanding of the methods. It is also a good idea to start with a dataset that is not too big to avoid long training times.
-		\subsection*{Credit Card Fraud Detection}
+		\subsection*{Credit-Card Fraud Detection}
 			This dataset is a credit card fraud detection dataset. The dataset contains transactions made by credit cards in September 2013 by European cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172\% of all transactions. It contains only numerical input variables which are the result of a PCA transformation. The only features which have not been transformed with PCA are \textit{Time} and \textit{Amount}. Feature \textit{Time} contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature \textit{Amount} is the transaction amount. Feature \textit{Class} is the response variable and it takes value 1 in case of fraud and 0 otherwise.
 		\subsection*{Scaling}
 			Some methods require the data to be scaled between 0 and 1. It also permits computation to be faster. Both the training and the testing datasets are scaled between 0 and 1. The scaling is done by dividing each value by the maximum value of the dataset. The scaling is done on the training dataset and then applied on the testing dataset.
@@ -114,7 +113,7 @@
 				\caption{Accuracy for train and test Credit-Card datasets}
 				\label{tree:creditcard_train_vs_test}
 			\end{subfigure}
-			\caption{Evolution of the Decision Tree Classifier accuracy according to the Maximum Depth of the tree}
+			\caption{Evolution of the Decision Tree Classifier accuracy according to the Maximum Depth of the Tree}
 			\label{tree:train_vs_test}
 		\end{figure}
 
@@ -137,7 +136,7 @@
 				\caption{Accuracy for train and test Credit-Card datasets}
 				\label{tree:creditcard_train_size_score_type_score_type}
 			\end{subfigure}
-			\caption{Evolution of the Decision Tree Classifier accuracy according to the Size of the training set}
+			\caption{Evolution of the Decision Tree Classifier accuracy according to the Size of the Training Tet}
 			\label{tree:train_size_score_type_score_type}
 		\end{figure}
 
@@ -160,7 +159,7 @@
 				\caption{Accuracy for train and test Credit-Card datasets}
 				\label{tree:tree_creditcard_min_samples_split_score_type_train_limit}
 			\end{subfigure}
-			\caption{Evolution of the Decision Tree Classifier accuracy according to Minimum Number of Samples required to split an internal node}
+			\caption{Evolution of the Decision Tree Classifier accuracy according to Minimum Number of Samples required to Split a Node}
 			\label{tree:min_samples_split_score_type_score_type}
 		\end{figure}
 
@@ -284,7 +283,6 @@
 		In terms of computation time, our Neural Network classifier is the slower one. In addition, the memory used in the learning process was also very high. It took 2h30m to train the neural network on both datasets.
 
 		I saw that it was not easy to find a good configuration for the neural network for all these parameters to get good results.
-
 	\section{Boosting}
 		Let's now discuss the influence of the followings parameters on the accuracy of the Boosting classifier:
 		\begin{itemize}
@@ -296,10 +294,84 @@
 	\section{Support Vector Machines}
 		In this section we will discuss about the Support Vector Machines classifier. We will see the influence of the followings parameters:
 		\begin{itemize}
-			\item The penalty of the error term;
+			\item The penalty of the error term (C value);
 			\item The kernel function;
 			\item The training set size.
 		\end{itemize}
+
+		\begin{figure}
+			\centering
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/svm_gender_kernel_score_type_score_type.png}
+				\caption{Accuracy for the train and test Gender datasets}
+				\label{svm:g_train_vs_test}
+			\end{subfigure}
+			~
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/svm_creditcard_kernel_score_type_score_type.png}
+				\caption{Accuracy for the train and test Credit-Card datasets}
+				\label{svm:cc_train_vs_test}
+			\end{subfigure}
+			\caption{Evolution of the SVM Classifier accuracy according to the Kernel}
+			\label{svm:train_vs_test}
+		\end{figure}
+
+		The parameter that seems to have the biggest impact is the kernel choosed.
+		In figure \ref{svm:train_vs_test}, we can see the impact on the score for both datasets. In the case of the Gender dataset, on figure \ref{svm:g_train_vs_test}, we see that the accuracy is pretty much the same for all the kernels except for the \textit{sigmoid} where the accuracy falls down to 0.45. The accuracy is around 0.98 for the other kernels : linear, polynomial (3rd degree) and the radial basis function. The score for the linear kernel clearly show that the data are linearly separable.
+		In the case of the Credit-Card dataset, on figure \ref{svm:cc_train_vs_test}, we see that the accuracy is better for the linear kernel, with an accuracy around 0.61. The other kernels don't perform very well.
+
+		\begin{figure}
+			\centering
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/svm_gender_c_score_type_kernel.png}
+				\caption{Accuracy for test Gender dataset according to different kernels}
+				\label{svm:g_c}
+			\end{subfigure}
+			~
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/svm_creditcard_c_score_type_kernel.png}
+				\caption{Accuracy for test Credit-Card dataset according to different kernels}
+				\label{svm:cc_c}
+			\end{subfigure}
+			\caption{Evolution of the SVM Classifier accuracy according to the C value}
+			\label{svm:c}
+		\end{figure}
+
+		Let's now study the impact of the C parameter. In SVM, we are searching for a hyperplane with the largest minimum margin, and a hyperplane that correctly separates as many instances as possible. The problem is that it is not always possible to get both. The C parameter determines how great our desire is for the latter. Figure \ref{svm:c} presents the accuracy for the test dataset according to the C value.
+		For Gender dataset, we can see, on figure \ref{svm:g_c} that the C value doesn't have a big impact on the accuracy. The accuracy is around 0.98 for all the C values bigger than 0.01, except for the \textit{sigmoid} kernel where the accuracy falls down tunder 0.5. Once again, because the data are linearly separable, the accuracy is pretty much the same for all the C values bigger than 0.01.
+		The strength of the regularization is inversely proportional to C. So, the smaller C is, the stronger the regularization is. Having a C value to small means that we are considering the margin too much, and we are not allowing enough errors. So, we are underfitting the data.
+		In the case of the Credit-Card dataset, on figure \ref{svm:cc_c}, we can see that the accuracy is neither really affected by the regularisation parameter for both kernels.
+
+		\begin{figure}
+			\centering
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/svm_gender_train_limit_score_type_kernel.png}
+				\caption{Accuracy for test Gender dataset for different kernels}
+				\label{svm:g_train_limit}
+			\end{subfigure}
+			~
+			\begin{subfigure}[]{0.45\columnwidth}
+				\centering
+				\includegraphics[width=\linewidth]{../graphics/svm_creditcard_train_limit_score_type_kernel.png}
+				\caption{Accuracy for test Credit-Card dataset for different kernels}
+				\label{svm:cc_train_limit}
+			\end{subfigure}
+			\caption{Evolution of the SVM Classifier accuracy according to the Size of the Training Set}
+			\label{svm:train_limit}
+		\end{figure}
+
+		The last parameter I will discuss for SVM is the training size. The results are presented on figure \ref{svm:train_limit}.
+		For the Gender dataset, we can see on figure \ref{svm:g_train_limit} that the accuracy is pretty much the same for all the training set sizes, with the working kernels. That dataset is indeed too easely separable.
+		For the Credit-Card dataset, we can see on figure \ref{svm:cc_train_limit} that the accuracy for the linear kernel is impacted by the training set size. There is that hollow betwenn 4 000 and 8 000 samples which means that we probably introduced outliers in the data. But the accuracy seems overall increasing with the training set size. I was not able to train more data due to the time computation of the SVM classifier.
+
+		Concerning time efficiency, the SVM classifier achieve a correct performance. To get those results and generate the data associated with, it took around 25 minutes.
+
+		In conlusion, SVM does not perform very well on the most difficult dataset, the Credit-Card one. I think the most important for SVM working well is the choice of the kernel function as seen above. In the overhand, data are not always linearly separable. In the case of the Credit-Card dataset, it seems that it is not the case. So SVM does not seem to be a good option.
 	\section{K-Nearest Neighbors}
 		Here I will discuss the results obtained using a K-Nearest Neighbors classifier. We will see the influence on the accuracy of the classifier of:
 		\begin{itemize}
@@ -337,7 +409,7 @@
 				\caption{Evolution of accuracy according to the number of training examples on Credit-Card dataset, with $n\_neighbors = 1$}
 				\label{knn:cc_train_limit}
 			\end{subfigure}
-			\caption{Evolution of the K-NN Classifier accuracy on the Test Set for different parameters}
+			\caption{Evolution of the K-NN Classifier accuracy on the Test Set for different Parameters}
 			\label{knn:knn}
 		\end{figure}
 
@@ -352,5 +424,4 @@
 
 		In comparison with the other methods, K-NN didn't  perform well on the Credit-Card dataset. Having a discussion with an expert of the dataset would be a good idea for designing a distance metric that is better suited to the problem. Indeed, the distance metric is the key to success with K-NN. So it is important to choose the most appropriate one.
 	\section{Conclusion}
-
 \end{document}
