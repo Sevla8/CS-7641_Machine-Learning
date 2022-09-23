@@ -64,7 +64,7 @@
 		\paragraph*{}
 			In this article, I will present the results of various Supervised Learning methods applied on two classification problems. Those methods are:
 			\begin{itemize}
-				\item Decision Trees with some form of pruning;
+				\item Decision Trees (with pruning);
 				\item Neural Networks;
 				\item Boosting;
 				\item Support Vector Machines;
@@ -85,14 +85,14 @@
 			In this article, I will learn over two datasets:
 			\begin{itemize}
 				\item \href{https://www.kaggle.com/datasets/elakiricoder/gender-classification-dataset}{Gender Classification};
-				\item \href{https://www.kaggle.com/code/sngkadam/credit-card-fraud-detection/data}{Credit Card Fraud Detection}.
+				\item \href{https://www.kaggle.com/code/sngkadam/credit-card-fraud-detection/data}{Credit-Card Fraud Detection}.
 			\end{itemize}
 		\subsection*{Gender Classification}
 			\paragraph*{}
 				This dataset describes some appearence characteritics. It contains 7 features and one output. The features are: long hair, width of the forehead, height of the forehead, wide nose, long nose, thin lips and the distance between nose and lips. The output feature is gender and takes value 1 for male and 0 for female. That dataset is not the most complicated. I thought it would be a good idea to start with a simple dataset to get a better understanding of the methods. It is also a good idea to start with a dataset that is not too big to avoid long training times.
 		\subsection*{Credit-Card Fraud Detection}
 			\paragraph*{}
-				This dataset is a credit card fraud detection dataset. The dataset contains transactions made by credit cards in September 2013 by European cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172\% of all transactions. It contains only numerical input variables which are the result of a PCA transformation. The only features which have not been transformed with PCA are \textit{Time} and \textit{Amount}. Feature \textit{Time} contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature \textit{Amount} is the transaction amount. Feature \textit{Class} is the response variable and it takes value 1 in case of fraud and 0 otherwise.
+				This dataset is a credit card fraud detection dataset. The dataset contains transactions made by credit cards in September 2013 by European cardholders. This dataset presents transactions that occurred in two days, where we have 492 frauds out of 284,807 transactions. The dataset is highly unbalanced, the positive class (frauds) account for 0.172\% of all transactions. It contains only numerical input variables which are the result of a PCA transformation. The only features which have not been transformed with PCA are \textit{Time} and \textit{Amount}. Feature \textit{Time} contains the seconds elapsed between each transaction and the first transaction in the dataset. The feature \textit{Amount} is the transaction amount. Feature \textit{Class} is the response variable and it takes value 1 in case of fraud and 0 otherwise. I chose that dataset because, unlike the previous one, it is a very unbalanced dataset with only a few positive outputs. I wanted to see how the methods would behave on such a dataset.
 		\subsection*{Normalisation}
 			\paragraph*{}
 				Some methods require the data to be scaled between 0 and 1. It also permits computation to be faster. Both the training and the testing datasets are scaled between 0 and 1. The scaling is done by dividing each value by the maximum value of the dataset. The scaling is done on the training dataset and then applied on the testing dataset.
@@ -120,11 +120,11 @@
 					\caption{Accuracy for train and test Credit-Card datasets}
 					\label{tree:creditcard_train_vs_test}
 				\end{subfigure}
-				\caption{Evolution of the Decision Tree Classifier accuracy according to the Maximum Depth of the Tree}
+				\caption{Accuracy of the Decision Tree Classifier according to the Maximum Depth of the Tree}
 				\label{tree:train_vs_test}
 			\end{figure}
 
-			We begin by finding the limit of our classifier. That limit can be of two natures : overfiting or a flat level on both training and test accuracy. Figure \ref{tree:train_vs_test} represents those limits. On figure \ref{tree:creditcard_train_vs_test}, we can see that the Decision Tree method quickly overfits. Indeed the training accuracy quickly rise above 99\% while the test accuracy decreases to reach around 0.87\%. We can notice that the best score is obtained for a maximum depth value of 5. Also the score considerably decreases for a maximum depth value of bigger than 5. therefore we can conclude that only 5 out of the 28 dimensions of the input space is relevant for the classification output.
+			We begin by finding the limit of our classifier. That limit can be of two natures : overfiting or a flat level on both training and test accuracy. Figure \ref{tree:train_vs_test} represents those limits. On figure \ref{tree:creditcard_train_vs_test}, we can see that the Decision Tree method quickly overfits. Indeed the training accuracy quickly rise above 99\% while the test accuracy decreases to reach around 0.87\%. We can notice that the best score is obtained for a maximum depth value of 5. Also the score considerably decreases for a maximum depth value bigger than 5. Therefore we can conclude that only 5 out of the 28 dimensions of the input space is relevant for the classification output.
 
 			On figure \ref{tree:gender_train_vs_test}, we can notice that the classifier does not overfit. It is interesting to constat that the score for the testing dataset happens to be better than the score for the training dataset. This is probably due to the fact that the dataset is not too big. We can also notice that the best score is obtained for a maximum depth value of 7 which means that all the dimensions of the input space are relevant for the classification output.
 		\paragraph*{}
@@ -143,11 +143,11 @@
 					\caption{Accuracy for train and test Credit-Card datasets}
 					\label{tree:creditcard_train_size_score_type_score_type}
 				\end{subfigure}
-				\caption{Evolution of the Decision Tree Classifier accuracy according to the Size of the Training Tet}
+				\caption{Accuracy of the Decision Tree Classifier according to the Size of the Training Tet}
 				\label{tree:train_size_score_type_score_type}
 			\end{figure}
 
-			Let's discuss now the influence of the size of the training set on the accuracy of the classifier. Figure \ref{tree:train_size_score_type_score_type} represents the accuracy of the classifier according to the size of the training set for both datasets. As expected the accuracy of the classifier increases when the size of the training set increases. The accuracy of the classifier is also impacted by the maximum depth of the tree. Indeed, the score for all the different sizes of the training set is almost the same when the maximum depth is around 1, whereas the score differs a lot when the maximum depth of the tree increases. We can also notice that the training set with 160 000 samples gives better results than the trainingset with 210 000 samples in figure \ref{tree:creditcard_train_size_score_type_score_type}. This is probably due to the fact that the training set with 160 000 samples is more balanced than the training set with 210 000 samples, meaning that when adding those 50 000 samples, we probably introduce some noise in the training set.
+			Let's discuss now the influence of the size of the training set on the accuracy of the classifier. Figure \ref{tree:train_size_score_type_score_type} represents the accuracy of the classifier according to the size of the training set for both datasets. As expected the accuracy of the classifier increases when the size of the training set increases. The accuracy of the classifier is also impacted by the maximum depth of the tree. Indeed, the score for all the different sizes of the training set is almost the same when the maximum depth is around 1, whereas the score differs a lot when the maximum depth of the tree increases. We can also notice that the training set with 160 000 samples gives better results than the trainingset with 210 000 samples in figure \ref{tree:creditcard_train_size_score_type_score_type}. This is probably due to the fact that the training set with 160 000 samples is less noisy than the training set with 210 000 samples, meaning that when adding those 50 000 samples, we probably introduce some noise in the training set.
 
 			On the Gender dataset, we can see on figure \ref{tree:gender_train_size_score_type_score_type} that the accuracy of the classifier is also impacted by the size of the training set. The best score of the classifier is for a training set of 2 000 samples. We can also notice that the score is almost the same for a maximum depth between 1 and 5. This means that the training set size as more inpact on the classifier when the maximum depth of the tree is high.
 		\paragraph*{}
@@ -166,14 +166,14 @@
 					\caption{Accuracy for train and test Credit-Card datasets}
 					\label{tree:tree_creditcard_min_samples_split_score_type_train_limit}
 				\end{subfigure}
-				\caption{Evolution of the Decision Tree Classifier accuracy according to Minimum Number of Samples required to Split a Node}
+				\caption{Accuracy of the Decision Tree Classifier according to Minimum Number of Samples required to Split a Node}
 				\label{tree:min_samples_split_score_type_score_type}
 			\end{figure}
 
 			The last parameter I will discuss is the minimum number of samples required to split an internal node. That variation is displayed on figure \ref{tree:min_samples_split_score_type_score_type}.
-			In the Gender dataset, we see that this parameter has some influence. First of all we can see that this parameter lead to overfiting. In the case of the training set composed of 2 000 samples, the classifier overfits for a minimum sample split bigger than 17. But it also improve the results for all the training set sizes, when the minimum sample split is not too high.
+			In the Gender dataset, we see that this parameter has some influence. First of all we can see that this parameter lead to overfiting. In the case of the training set composed of 2 000 samples, the classifier overfits for a minimum sample split bigger than 17. But it also improves the results for all the training set sizes, when the minimum sample split is not too high.
 
-			In the case of the Credit-Card dataset, we can see that the accuracy of the classifier is not really impacted by the minimum number of samples required to split an internal node except for the smaller datatset. Which have sense. Indeed, the smaller the dataset is the one with the biggest chance of improvment.
+			In the case of the Credit-Card dataset, we can see that the accuracy of the classifier is not really impacted by the minimum number of samples required to split an internal node except for the smaller datatset. Which have sense. Indeed, the smaller dataset is the one with the biggest chance of improvment.
 		\paragraph*{}
 			Decision Tree is the faster method compared with all the other ones. To get those results and generate the data associated with, it took around 10 minutes.
 
@@ -204,7 +204,7 @@
 					\caption{Accuracy for the train and test Credit-Card dataset}
 					\label{nn:cc_train_vs_test}
 				\end{subfigure}
-				\caption{Evolution of the Neural Network Classifier accuracy according to the Number of Epochs}
+				\caption{Accuracy of the Neural Network Classifier according to the Number of Epochs}
 				\label{nn:train_vs_test}
 			\end{figure}
 
@@ -225,7 +225,7 @@
 					\caption{Accuracy with and without batch normalization for Credit-Card dataset}
 					\label{nn:cc_bn}
 				\end{subfigure}
-				\caption{Evolution of the Neural Network Classifier accuracy according to the use of Batch Normalization}
+				\caption{Accuracy of the Neural Network Classifier according to the use of Batch Normalization}
 				\label{nn:bn}
 			\end{figure}
 
@@ -246,7 +246,7 @@
 					\caption{Accuracy for different activation functions on Credit-Card dataset}
 					\label{nn:cc_act}
 				\end{subfigure}
-				\caption{Evolution of the Neural Network Classifier accuracy according to the Activation Function}
+				\caption{Accuracy of the Neural Network Classifier according to the Activation Function}
 				\label{nn:activation}
 			\end{figure}
 
@@ -267,7 +267,7 @@
 					\caption{Accuracy for different layers on Credit-Card dataset}
 					\label{nn:cc_layers}
 				\end{subfigure}
-				\caption{Evolution of the Neural Network Classifier accuracy according to the Number of Layers}
+				\caption{Accuracy of the Neural Network Classifier according to the Number of Layers}
 				\label{nn:layers}
 			\end{figure}
 
@@ -290,7 +290,7 @@
 					\caption{Accuracy for different training dataset sizes on Credit-Card dataset}
 					\label{nn:cc_tl}
 				\end{subfigure}
-				\caption{Evolution of the Neural Network Classifier accuracy according to the Training Dataset Size}
+				\caption{Accuracy of the Neural Network Classifier according to the Training Dataset Size}
 				\label{nn:size}
 			\end{figure}
 
@@ -324,7 +324,7 @@
 					\caption{Accuracy for the train and test Credit-Card dataset}
 					\label{boost:cc_train_vs_test}
 				\end{subfigure}
-				\caption{Evolution of the Boosting Classifier accuracy according to the Maximum Depth of an Estimator}
+				\caption{Accuracy of the Boosting Classifier according to the Maximum Depth of an Estimator}
 				\label{boost:train_vs_test}
 			\end{figure}
 
@@ -348,7 +348,7 @@
 					\caption{Accuracy for the train and test Credit-Card dataset, for $maxdepth=3$}
 					\label{boost:cc_train_vs_test_es}
 				\end{subfigure}
-				\caption{Evolution of the Boosting Classifier accuracy according to the Number of Estimator used for a given maximum depth}
+				\caption{Accuracy of the Boosting Classifier according to the Number of Estimator used for a given maximum depth}
 				\label{boost:train_vs_test_es}
 			\end{figure}
 
@@ -372,12 +372,12 @@
 					\caption{Accuracy for the train and test Credit-Card dataset, for $trainlimit=11000$ and $maxdepth\geq1$}
 					\label{boost:cc_train_vs_test_ms}
 				\end{subfigure}
-				\caption{Evolution of the Boosting Classifier accuracy according to the Minimum Number of Sample to Split an Estimator's node for a given size of training and maximum depth}
+				\caption{Accuracy of the Boosting Classifier according to the Minimum Number of Sample to Split an Estimator's node for a given size of training and maximum depth}
 				\label{boost:train_vs_test_ms}
 			\end{figure}
 
 			I present on figure \ref{boost:train_vs_test_ms} the influence of the parameter that set the minimum number of samples required to split an internal node.
-			In the figure \ref{boost:g_train_vs_test_ms}, we can see that for the Gender dataset, thhat parameter increases a little bit the score of the classifier. But because we saw the perfect fit of the classifier with a maximum depth of 1, we wouldn't really care about that value.
+			In the figure \ref{boost:g_train_vs_test_ms}, we can see that for the Gender dataset, that parameter increases a little bit the score of the classifier. But because we saw the perfect fit of the classifier with a maximum depth of 1, we wouldn't really care about that value.
 
 			For the Credit-Card dataset, presented on figure \ref{boost:cc_train_vs_test_ms}, we can see that the best score is for a value between 12 and 17. It is interesting. The fact is I was not able to train as much data I would have liked for this dataset, because of computation time. Perhaps, with more data, result would have been more understanding.
 
@@ -397,12 +397,12 @@
 					\caption{Accuracy for the train and test Credit-Card dataset, for different train max depth values}
 					\label{boost:cc_train_limit}
 				\end{subfigure}
-				\caption{Evolution of the Boosting Classifier accuracy according to the Training Set Size}
+				\caption{Accuracy of the Boosting Classifier according to the Training Set Size}
 				\label{boost:train_limit}
 			\end{figure}
 
 			In figure \ref{boost:train_limit}, I present the accuracy of the classifier according to the training set size.
-			In the Gender dataset, we can see that the accuracy does not change a lot when the training set size is increased. That could mean the that the data is nnot very complex and well balanced.
+			In the Gender dataset, we can see that the accuracy does not change a lot when the training set size is increased. That could mean that the data is not very complex and well balanced.
 
 			In the Credit-Card dataset, presented on figure \ref{boost:cc_train_limit}, as expected, we can see that the accuracy increases when the training set size increases. There is that weird flat for a training set size between 3 500 and 6 000 were independent of the maximum depth, the score is the same. I could not explain why.
 			I was not able to train more data due to the time computation of the Boosting classifier.
@@ -436,7 +436,7 @@
 					\caption{Accuracy for the train and test Credit-Card datasets}
 					\label{svm:cc_train_vs_test}
 				\end{subfigure}
-				\caption{Evolution of the SVM Classifier accuracy according to the Kernel}
+				\caption{Accuracy of the SVM Classifier according to the Kernel}
 				\label{svm:train_vs_test}
 			\end{figure}
 
@@ -461,14 +461,14 @@
 					\caption{Accuracy for test Credit-Card dataset according to different kernels}
 					\label{svm:cc_c}
 				\end{subfigure}
-				\caption{Evolution of the SVM Classifier accuracy according to the C value}
+				\caption{Accuracy of the SVM Classifier according to the C value}
 				\label{svm:c}
 			\end{figure}
 
 			Let's now study the impact of the C parameter. In SVM, we are searching for a hyperplane with the largest minimum margin, and a hyperplane that correctly separates as many instances as possible. The problem is that it is not always possible to get both. The C parameter determines how great our desire is for the latter. Figure \ref{svm:c} presents the accuracy for the test dataset according to the C value.
 
-			For Gender dataset, we can see, on figure \ref{svm:g_c} that the C value doesn't have a big impact on the accuracy. The accuracy is around 0.98 for all the C values bigger than 0.01, except for the \textit{sigmoid} kernel where the accuracy falls down tunder 0.5. Once again, because the data are linearly separable, the accuracy is pretty much the same for all the C values bigger than 0.01.
-			The strength of the regularization is inversely proportional to C. So, the smaller C is, the stronger the regularization is. Having a C value to small means that we are considering the margin too much, and we are not allowing enough errors. So, we are underfitting the data.
+			For Gender dataset, we can see, on figure \ref{svm:g_c} that the C value doesn't have a big impact on the accuracy. The accuracy is around 0.98 for all the C values bigger than 0.01, except for the \textit{sigmoid} kernel where the accuracy falls down under 0.5. Once again, because the data are linearly separable, the accuracy is pretty much the same for all the C values bigger than 0.01.
+			The strength of the regularization is inversely proportional to C. So, the smaller C is, the stronger the regularization is. Having a C value too small means that we are considering the margin too much, and we are not allowing enough errors. So, we are underfitting the data.
 
 			In the case of the Credit-Card dataset, on figure \ref{svm:cc_c}, we can see that the accuracy is neither really affected by the regularisation parameter for both kernels.
 		\paragraph*{}
@@ -487,7 +487,7 @@
 					\caption{Accuracy for test Credit-Card dataset for different kernels}
 					\label{svm:cc_train_limit}
 				\end{subfigure}
-				\caption{Evolution of the SVM Classifier accuracy according to the Size of the Training Set}
+				\caption{Accuracy of the SVM Classifier according to the Size of the Training Set}
 				\label{svm:train_limit}
 			\end{figure}
 
@@ -526,7 +526,7 @@
 					\caption{Evolution of accuracy according to the number of neighbors on Credit-Card dataset, with $train\_limit = 90000$}
 					\label{knn:cc_neighbors}
 				\end{subfigure}
-				\caption{Evolution of the K-NN Classifier accuracy according to the Number of Neighbors}
+				\caption{Accuracy of the K-NN Classifier according to the Number of Neighbors}
 				\label{knn:neighbors}
 			\end{figure}
 
@@ -553,7 +553,7 @@
 					\caption{Evolution of accuracy according to the number of training examples on Credit-Card dataset, with $n\_neighbors = 1$}
 					\label{knn:cc_train_limit}
 				\end{subfigure}
-				\caption{Evolution of the K-NN Classifier accuracy according to the Size of the Training Set}
+				\caption{Accuracy of the K-NN Classifier according to the Size of the Training Set}
 				\label{knn:train_limit}
 			\end{figure}
 
@@ -569,5 +569,5 @@
 
 			The most complicated in machine learning is without doubt the tuning of the parameters. It is a very time consuming task. It is also a very important task. The choice of the parameters is the key to success. That is why the domain knowledge is so important.
 
-			We also saw that the data is fundamental of machine learning. Every time we increased the training size we got better results. The cleanest data as possible, meaning the less outliers as possible, is also important. we saw that a simple dataset like the Gender one gaves us very good results with all classifiers.
+			We also saw that the data is fundamental of machine learning. Every time we increased the training size we got better results. The cleanest data as possible, meaning the less outliers as possible, is also important. We saw that a simple dataset like the Gender one gaves us very good results with all classifiers.
 \end{document}
