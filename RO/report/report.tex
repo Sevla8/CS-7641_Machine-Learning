@@ -47,7 +47,7 @@
 \title{
 	Machine Learning
 	\\-\\
-	Supervised Learning
+	Randomised Optimisation
 }
 \author{
 	\href{mailto:brandon.alves@gatech.edu}{Brandon Alves}
@@ -58,7 +58,7 @@
 	\maketitle
 	\thispagestyle{empty}
 	\tableofcontents
-	% \listoffigures
+	\listoffigures
 	% \clearpage
 	% \setcounter{page}{1}
 	\section{Introduction}
@@ -88,16 +88,16 @@
 				We present on figure \ref{tsp:all} the results of the four different optimisers on the TSP problem. The first thing to notice is that there is a lot of variation for each algorithm. RHC and SA have an median accuracy which are pretty close. GA does a little bit better while MIMIC gets the best median result. We can also notice that MIMIC gets the best results with a low number of iteration and reaches its bets optimisation only after a few iterations.
 				\begin{figure}[h]
 					\centering
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/tsp_all_Iteration_Error_Algorithm.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/tsp_all_Iteration_Error_Algorithm.png}
 						\caption{Accuracy on TSP Problem for the different algorithms}
 						\label{tsp:all_accuracy}
 					\end{subfigure}
-					% ~
-					\begin{subfigure}[t]{0.45\columnwidth}
+					~
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/tsp_all_Iteration_Time_Algorithm.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/tsp_all_Iteration_Time_Algorithm.png}
 						\caption{Time on TSP Problem for the different algorithms}
 						\label{tsp:all_time}
 					\end{subfigure}
@@ -120,16 +120,16 @@
 
 				\begin{figure}[h]
 					\centering
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/tsp_SA_Iteration_Error_SA_cooling_factor.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/tsp_SA_Iteration_Error_SA_cooling_factor.png}
 						\caption{Accuracy on TSP with SA, for different cooling factors}
 						\label{tsp:sa_cooling}
 					\end{subfigure}
 					~
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=1\linewidth]{../graphics/tsp_SA_Iteration_Error_SA_initial_temperature.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/tsp_SA_Iteration_Error_SA_initial_temperature.png}
 						\caption{Accuracy on TSP with SA, for different initial temperatures}
 						\label{tsp:sa_initial_temp}
 					\end{subfigure}
@@ -154,23 +154,23 @@
 
 				\begin{figure}[h]
 					\centering
-					\begin{subfigure}[t]{0.32\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/tsp_GA_Iteration_Error_GA_population.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/tsp_GA_Iteration_Error_GA_population.png}
 						\caption{Accuracy on TSP with GA, for different population size}
 						\label{tsp:ga_pop}
 					\end{subfigure}
 					~
-					\begin{subfigure}[t]{0.32\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/tsp_GA_Iteration_Error_GA_mutate_number.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/tsp_GA_Iteration_Error_GA_mutate_number.png}
 						\caption{Accuracy on TSP with GA, for different mutate number, with population set to 600}
 						\label{tsp:ga_mutate}
 					\end{subfigure}
 					~
-					\begin{subfigure}[t]{0.32\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/tsp_GA_Iteration_Error_GA_mate_number.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/tsp_GA_Iteration_Error_GA_mate_number.png}
 						\caption{Accuracy on TSP with GA, for different mate number, with population set to 600 and mutate number to 10}
 						\label{tsp:ga_mate}
 					\end{subfigure}
@@ -197,16 +197,16 @@
 
 				\begin{figure}[h]
 					\centering
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/tsp_MIMIC_Iteration_Error_MIMIC_samples.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/tsp_MIMIC_Iteration_Error_MIMIC_samples.png}
 						\caption{Accuracy on TSP with MIMIC, for different number of samples}
 						\label{tsp:mimic_samples}
 					\end{subfigure}
 					~
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/tsp_MIMIC_Iteration_Error_MIMIC_to_keep.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/tsp_MIMIC_Iteration_Error_MIMIC_to_keep.png}
 						\caption{Accuracy on TSP with MIMIC, for different number of estimators kept, with a number of samples to 350}
 						\label{tsp:mimic_to_keep}
 					\end{subfigure}
@@ -231,16 +231,16 @@
 
 				\begin{figure}[h]
 					\centering
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/flip_flop_all_Iteration_Error_Algorithm.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/flip_flop_all_Iteration_Error_Algorithm.png}
 						\caption{Accuracy on Flip Flop problem for the different algorithms}
 						\label{ff:all_accuracy}
 					\end{subfigure}
 					~
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/flip_flop_all_Iteration_Time_Algorithm.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/flip_flop_all_Iteration_Time_Algorithm.png}
 						\caption{Time on Flip Flop problem for the different algorithms}
 						\label{ff:all_time}
 					\end{subfigure}
@@ -259,16 +259,17 @@
 				\end{itemize}
 
 				\begin{figure}[h]
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\centering
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/flip_flop_SA_Iteration_Error_SA_cooling_factor.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/flip_flop_SA_Iteration_Error_SA_cooling_factor.png}
 						\caption{Accuracy on Flip Flop problem with SA, for different Cooling Factors}
 						\label{ff:sa_cooling}
 					\end{subfigure}
 					~
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/flip_flop_SA_Iteration_Error_SA_initial_temperature.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/flip_flop_SA_Iteration_Error_SA_initial_temperature.png}
 						\caption{Accuracy on Flip Flop problem with SA, for different Initial Temperature}
 						\label{ff:sa_initial_temp}
 					\end{subfigure}
@@ -288,23 +289,23 @@
 
 				\begin{figure}[h]
 					\centering
-					\begin{subfigure}[t]{0.32\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/flip_flop_GA_Iteration_Error_GA_population.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/flip_flop_GA_Iteration_Error_GA_population.png}
 						\caption{Accuracy on Flip Flop problem with GA, for different population sizes}
 						\label{ff:ga_pop}
 					\end{subfigure}
 					~
-					\begin{subfigure}[t]{0.32\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/flip_flop_GA_Iteration_Error_GA_mutate_number.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/flip_flop_GA_Iteration_Error_GA_mutate_number.png}
 						\caption{Accuracy on Flip Flop problem with GA, for different mutate number, with population set to 600}
 						\label{ff:ga_mutate}
 					\end{subfigure}
 					~
-					\begin{subfigure}[t]{0.32\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/flip_flop_GA_Iteration_Error_GA_mate_number.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/flip_flop_GA_Iteration_Error_GA_mate_number.png}
 						\caption{Accuracy on Flip Flop problem with GA, for different mate number, with population set to 600}
 						\label{ff:ga_mate}
 					\end{subfigure}
@@ -321,16 +322,16 @@
 
 				\begin{figure}[h]
 					\centering
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/flip_flop_MIMIC_Iteration_Error_MIMIC_samples.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/flip_flop_MIMIC_Iteration_Error_MIMIC_samples.png}
 						\caption{Accuracy on Flip Flop problem with MIMIC, for different number of samples}
 						\label{ff:mimic_samples}
 					\end{subfigure}
 					~
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/flip_flop_MIMIC_Iteration_Error_MIMIC_to_keep.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/flip_flop_MIMIC_Iteration_Error_MIMIC_to_keep.png}
 						\caption{Accuracy on Flip Flop problem with MIMIC, for different number of estimators kept, with a number of samples set to 250}
 						\label{ff:mimic_to_keep}
 					\end{subfigure}
@@ -366,16 +367,16 @@
 
 				\begin{figure}[h]
 					\centering
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/four_peaks_all_Iteration_Error_Algorithm.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/four_peaks_all_Iteration_Error_Algorithm.png}
 						\caption{Accuracy on Four Peaks problem for the different algorithms}
 						\label{fp:all_accuracy}
 					\end{subfigure}
 					~
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/four_peaks_all_Iteration_Time_Algorithm.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/four_peaks_all_Iteration_Time_Algorithm.png}
 						\caption{Time on Four Peaks problem for the different algorithms}
 						\label{fp:all_time}
 					\end{subfigure}
@@ -390,16 +391,16 @@
 
 				\begin{figure}[h]
 					\centering
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/four_peaks_SA_Iteration_Error_SA_cooling_factor.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/four_peaks_SA_Iteration_Error_SA_cooling_factor.png}
 						\caption{Accuracy on Four Peaks problem with SA, for different Cooling Factors}
 						\label{fp:sa_cooling}
 					\end{subfigure}
 					~
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/four_peaks_SA_Iteration_Error_SA_initial_temperature.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/four_peaks_SA_Iteration_Error_SA_initial_temperature.png}
 						\caption{Accuracy on Four Peaks problem with SA, for different Initial temperatures}
 						\label{fp:sa_initial_temp}
 					\end{subfigure}
@@ -416,23 +417,23 @@
 
 				\begin{figure}[h]
 					\centering
-					\begin{subfigure}[t]{0.32\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/four_peaks_GA_Iteration_Error_GA_population.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/four_peaks_GA_Iteration_Error_GA_population.png}
 						\caption{Accuracy on Four Peaks problem with GA, for different population sizes}
 						\label{fp:ga_pop}
 					\end{subfigure}
 					~
-					\begin{subfigure}[t]{0.32\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/four_peaks_GA_Iteration_Error_GA_mutate_number.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/four_peaks_GA_Iteration_Error_GA_mutate_number.png}
 						\caption{Accuracy on Four Peaks problem with GA, for different mutate numbers, with population set to 600}
 						\label{fp:ga_mutate}
 					\end{subfigure}
 					~
-					\begin{subfigure}[t]{0.32\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/four_peaks_GA_Iteration_Error_GA_mate_number.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/four_peaks_GA_Iteration_Error_GA_mate_number.png}
 						\caption{Accuracy on Four Peaks problem with GA, for different mate numbers, with population set to 600}
 						\label{fp:ga_mate}
 					\end{subfigure}
@@ -454,16 +455,16 @@
 
 				\begin{figure}[h]
 					\centering
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/four_peaks_MIMIC_Iteration_Error_MIMIC_samples.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/four_peaks_MIMIC_Iteration_Error_MIMIC_samples.png}
 						\caption{Accuracy on Four Peaks problem with MIMIC, for different number of samples}
 						\label{fp:mimic_samples}
 					\end{subfigure}
 					~
-					\begin{subfigure}[t]{0.45\columnwidth}
+					\begin{subfigure}[t]{\columnwidth}
 						\centering
-						\includegraphics[width=\linewidth]{../graphics/four_peaks_MIMIC_Iteration_Error_MIMIC_to_keep.png}
+						\includegraphics[width=0.68\linewidth]{../graphics/four_peaks_MIMIC_Iteration_Error_MIMIC_to_keep.png}
 						\caption{Accuracy on Four Peaks problem with MIMIC, for different number of estimator kept}
 						\label{fp:mimic_to_keep}
 					\end{subfigure}
@@ -496,16 +497,16 @@
 
 			\begin{figure}[h]
 				\centering
-				\begin{subfigure}[t]{0.45\columnwidth}
+				\begin{subfigure}[t]{\columnwidth}
 					\centering
-					\includegraphics[width=\linewidth]{../graphics/g_all_Iteration_Error_Algorithm.png}
+					\includegraphics[width=0.68\linewidth]{../graphics/g_all_Iteration_Error_Algorithm.png}
 					\caption{Training accuracy on the Gender dataset for different algorithms}
 					\label{g:all_test}
 				\end{subfigure}
 				~
-				\begin{subfigure}[t]{0.45\columnwidth}
+				\begin{subfigure}[t]{\columnwidth}
 					\centering
-					\includegraphics[width=1\linewidth]{../graphics/g_all_Iteration_Test_Error_Algorithm.png}
+					\includegraphics[width=0.68\linewidth]{../graphics/g_all_Iteration_Test_Error_Algorithm.png}
 					\caption{Validation accuracy on the Gender dataset for different algorithms}
 					\label{g:all_val}
 				\end{subfigure}
@@ -513,38 +514,38 @@
 				\label{g:all}
 			\end{figure}
 		\subsection{Randomized Hill Climbing}
-			We present on figure \ref{g:rhc} the results obtained with RHC. RHC succeeds to get the best accuracy on the validation set with all the different networks tested. The difference is the number of iteration required to converge. The best result is obtained with the network $(35)$ with an accuracy of 1.0 after only 1800 iterations. The worst result is obtained with the network $(30, 10)$ with an accuracy of 1.0 after 6200 iterations. The network $(30, 10)$ is too complex here while the network $(5)$ is too simple. An optimised network for that problem that gives a perfect iteration in the most efficient way is therefore the network $(35)$.
+			We present on figure \ref{g:rhc} the results obtained with RHC. RHC succeeds to get the best accuracy on the validation set with all the different networks tested. The difference is the number of iteration required to converge. The best result is obtained with the network $(35)$ with an accuracy of 1.0 after only 1800 iterations. The worst result is obtained with the network $(30, 10)$ with an accuracy of 1.0 after 6200 iterations. The network $(30, 10)$ is too complex here while the network $(5)$ is too simple. RHC did not managed to find correct weights as fast as for $(30, 10)$ network.  An optimised network for that problem that gives a perfect accuracy in the most efficient way is therefore the network $(35)$.
 
 			RHC is again the fastest algorithm. It took approximately 1h to train all the different networks.
 
 			\begin{figure}[h]
 				\centering
-				\includegraphics[width=0.45\linewidth]{../graphics/g_RHC_Iteration_Test_Error_Layers.png}
+				\includegraphics[width=0.68\linewidth]{../graphics/g_RHC_Iteration_Test_Error_Layers.png}
 				\caption{Accuracy with RHC for different layers}
 				\label{g:rhc}
 			\end{figure}
 		\subsection{Simulated Annealing}
-			We present on figure \ref{g:sa} the results obtained with SA. SA also succeeds to get the best accuracy on the validation set. But that time not for all the networks. The best network with RHC is the worst with SA. The network $(35)$ only manage to get an accuracy of 0.5 after 7000 iterations. The best result here is obtained with the network $(30, 10)$ with an accuracy of 1.0 after 4000 iterations. The other networks converge slower. I cannot really explain why the network $(35)$ is so bad with SA and $(30, 10)$ suddently become the best network.
+			We present on figure \ref{g:sa} the results obtained with SA. SA also succeeds to get the best accuracy on the validation set. But that time not for all the networks. The best network with RHC is the worst with SA. The network $(35)$ only manage to get an accuracy of 0.5 after 7000 iterations. The best result here is obtained with the network $(30, 10)$ with an accuracy of 1.0 after 4000 iterations. The other networks converge slower. I cannot really explain why the network $(35)$ is so bad with SA and why $(30, 10)$ suddently become the best network. We also can notice that the space exploration introduced by SA increased the number of iterations needed to converge.
 
 			It took approximately 2h to train all the different networks with SA.
 
-			\begin{figure}
+			\begin{figure}[h]
 				\centering
-				\includegraphics[width=0.45\linewidth]{../graphics/g_SA_Iteration_Test_Error_Layers.png}
+				\includegraphics[width=0.68\linewidth]{../graphics/g_SA_Iteration_Test_Error_Layers.png}
 				\caption{Accuracy with SA for different layers}
 				\label{g:sa}
 			\end{figure}
 		\subsection{Genetic Algorithm}
-			We present on figure \ref{g:ga} the results obtained with GA.
+			We present on figure \ref{g:ga} the results obtained with GA. Like for the two previous optimisers, GA succeeds to find weights that leads to a perfect accuracy. It is interesting to see that GA has a perfect fit with the simpliest networks $(5)$ and $(15)$ very fast. The crossover introduced by GA seems to fit well with the problem and leads to a very fast convergence over the iterations. Due to the time complexity of GA, I was not able to test more complex networks.
 
-			\begin{figure}
+			\begin{figure}[h]
 				\centering
-				% \includegraphics[width=0.7\linewidth]{../graphics/g_GA_Iteration_Test_Error_Layers.png}
+				\includegraphics[width=0.68\linewidth]{../graphics/g_GA_Iteration_Test_Error_Layers.png}
 				\caption{Accuracy with GA for different layers}
 				\label{g:ga}
 			\end{figure}
 		\subsection*{Conclusion}
 			To conclude we can say that randomised algorithms can be helpful to optimise the weights of a neural network. But I guess this heavely depends on the dataset we are considering. Here, the gender dataset turned to be really well suited for neural networks.
 	\section{Conclusion}
-		During this work I learned in a practical way the characteritics of different randomised optimisers. I saw that the fine tuning of the parameters were not the most important thing as it can be in supervised learning. But randomised optimisation and supervised learning do not have the same objective. The last part of this report showed that the first one can be used for optimising the second one. As always each optimiser has its specificities and it is important to know them to be able to use in a specific problem the most appropriate one.
+		During this work I learned in a practical way the characteritics of different randomised optimisers. I saw that the fine tuning of the parameters were not the most important thing as it can be very important in supervised learning. But randomised optimisation and supervised learning do not have the same objective. The last part of this report showed that the first one can be used for optimising the second one. As always each optimiser has its specificities and it is important to know them to be able to use in a specific problem the most appropriate one.
 \end{document}
