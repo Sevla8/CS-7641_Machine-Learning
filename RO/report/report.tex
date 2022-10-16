@@ -1,4 +1,4 @@
-\documentclass[10pt]{article}
+\documentclass[twocolumn, 10pt]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
@@ -75,7 +75,7 @@
 			\item Flip Flop
 			\item Four Peaks
 		\end{itemize}
-		I will also use the three first optimisers to find good weights for a neural network on the credit card fraud dataset. Like in the previous report, the graphs presented in this report follow the same format. The hard line represents the median value while the hue areas fill the space between the minimal and maximal values.
+		I will also use the three first optimisers to find good weights for a neural network on the gender dataset. The graphs presented in this report follow the same format as the one in the previous report. The hard line represents the median value while the hue areas fill the space between the minimal and maximal values.
 	\section{Random Optimisation}
 		\subsection{Traveling Salesman Problem}
 			\subsubsection*{Introduction}
@@ -105,7 +105,7 @@
 					\label{tsp:all}
 				\end{figure}
 			\subsubsection*{Randomised Hill Climbing}
-				The only parameter we will discuss here for RHC is the number of iterations. We see that the number of iterations has an impact on the performance of the algorithm. The best results are obtained with a high number of iterations but RHC does not success to get a good accuracy even with a high number of iterations as we can see on figure \ref{tsp:all_accuracy}. It is not surprising that RHC does not get good results on this problem because it is a local optimiser. It will not be able to find the best solution because it will get stuck in a local optimum.
+				The only parameter we will discuss here for RHC is the number of iterations. We see that the number of iterations has an impact on the performance of the algorithm. The best results are obtained with a high number of iterations but RHC does not success to get a good accuracy even with a high number of iterations as we can see on figure \ref{tsp:all_accuracy}. It is not surprising that RHC does not get good results on this problem because it is a local optimiser. It will not be able to find the best solution because it will get stuck most of the time in a local optimum. The only way it can succeed is to start in the basin of attraction of one global optimum.
 
 				RHC is the fastest algorithm of the four as we can see on figure \ref{tsp:all_time}. It is not surprising because it is a local optimiser and it does not explore the whole search space. It only exploit the neighbourhood of the current state.
 
@@ -116,6 +116,7 @@
 					\item Temperature
 					\item Cooling Rate
 				\end{itemize}
+				We can see the similarity between the results of RHC and SA. Which seems faire because SA is just an improved way of doing RHC. Another interesting thing to notice is that SA gives the best and worst results in maximum and minimum values respectively. This can be explained by the space exploration of SA where RHC only exploit the neighbourhood of the current state. Let's discuss the impact of the two parameters of SA.
 
 				\begin{figure}[h]
 					\centering
@@ -136,9 +137,9 @@
 					\label{tsp:sa}
 				\end{figure}
 
-				We can see the inpact of the cooling factor on the accuracy of the algorithm on figure \ref{tsp:sa_cooling}. We notice that the cooling factor does not seem to be related to the algorithm.
+				We can see the impact of the cooling factor on the accuracy of the algorithm on figure \ref{tsp:sa_cooling}. We notice that the cooling factor does not seem to have a big influence. However it is interesting to notice that the minimum and maximum values are affected. We can can see that a high cooling factor gives smaller minimal accuracy, whereas a low value gives smaller differences between min and max. This can be explained by the fact that the bigger the cooling factor is, the more the temperature will decrease and the less the algorithm will explore the search space, and finally SA will tend to get stuck in a local optimum like for RHC. In the other hand, a low cooling factor will allow SA to explore more the search space. This is why we can see that the minimum accuracy is better with a low cooling factor.
 
-				We can see the impact of the initial temperature on the accuracy of the algorithm on figure \ref{tsp:sa_initial_temp}. Like for the cooling factor, the initial temperature does not impact a lot the accuracy of the algorithm. The best results are obtained with a low initial temperature of 50.
+				We can see the impact of the initial temperature on the accuracy of the algorithm on figure \ref{tsp:sa_initial_temp}. Like for the cooling factor, the initial temperature does not impact a lot the accuracy of the algorithm. The best results are obtained with a low initial temperature of 50. The same comments as for the cooling factor can be applied here.
 
 				SA is the second fastest algorithm of the four as we can see on figure \ref{tsp:all_time}. It is not surprising because of its similarity with RHC.
 
@@ -177,7 +178,7 @@
 					\label{tsp:ga}
 				\end{figure}
 
-				Let's start with the population size. We can see on figure \ref{tsp:ga_pop} that the accuracy is the highest for high values of population size while it is the lowest for low values of population size. We can see that the best results are obtained with a population size of 500. The fact that the accuracy depends on the population size is not surprising because the population size is the number of individuals in the population. The more individuals we have, the more chances we have to find a good solution.
+				Let's start with the population size. We can see on figure \ref{tsp:ga_pop} that the accuracy is the highest for high values of population size while it is the lowest for low values of population size. We can see that the best results are obtained with a population size of 500. The fact that the accuracy depends on the population size is not surprising because the population size is the number of individuals in the population. The more individuals we have, the more chances we will have to combine them to find a good solution.
 
 				Let's now discuss the impact of the mutate number. We can see on figure \ref{tsp:ga_mutate} that the accuracy is the highest for low values of mutate number while it is the lowest for high values of mutate number. We can see that the best results are obtained with a mutate number of 10. The mutation is important in GA as it permits to introduce new variations that were not present in past iterations. The problem is that introducing too much variations can lead to turn a good predictor into a poor one before it has a chance to reproduce.
 
@@ -213,7 +214,7 @@
 					\label{tsp:mimic}
 				\end{figure}
 
-				Let's discuss the impact of the number of samples generated for each iteration. We can see on figure \ref{tsp:mimic_samples} that the accuracy is the highest for low values of number of samples while it is the lowest for high values of number of samples. We can see that the best results are obtained with a number of samples of 50.
+				Let's discuss the impact of the number of samples generated for each iteration. We can see on figure \ref{tsp:mimic_samples} that the accuracy is the highest for a number of samples of 50 and the lowest for a number of samples of 350 while a number of samples of 250 gives better results than a number of 150. That result is a little bit surprising as we would have expected the best results to be given with a number of samples of 350.
 
 				On figure \ref{tsp:mimic_to_keep} we can see the impact of the number of samples to keep from an iteration to another with a number of samples of 350. I decided to use a high number of samples at each iteration to make the different number of samples to keep more significants. We can see that the best median accuracy is given with a number of samples to keep of 10. The worse accuracy is given for a number of sample to keep of 160. It is interesting to see that, in TSP, a performant MIMIC is one with few samples generated for each iteration as well as a few samples kept from an iteration to another to try to combine the good solutions.
 
@@ -225,6 +226,8 @@
 				The Flip Flop problem is a problem where we have a binary vector of size $n$ and we want to find the vector that has the most consecutive bit alternations. The fitness function is the number of consecutive bit alternations in the vector.
 
 				We present on figure \ref{ff:all} the accuracy and the time for the different algorithms on this problem. We can see that the best median accuracy is given by SA followed by MIMC. We chose a vector of 50 bit which mean that the best possible score is 49. SA and MIMIC manage sometimes to get that maximal score. GA stops at 48 while RHC does not exceed 43.
+
+				To be more concise, I will not restate the comments already expressed in the last subsection. Instead I will concentrate myself on what differs.
 
 				\begin{figure}[h]
 					\centering
@@ -245,7 +248,7 @@
 					\label{ff:all}
 				\end{figure}
 			\subsubsection*{Randomised Hill Climbing}
-				Again RHC does not success to perform well. We can see on figure \ref{ff:all_accuracy} that the best accuracy is given by a number of iterations bigger than 1000. But RHC does not success to improve even with much more iteration. It always get blocked on local optimums.
+				Again RHC does not success to perform well. We can see on figure \ref{ff:all_accuracy} that the best accuracy is given by a number of iterations bigger than 1000. But RHC does not succeed to improve even with much more iteration. It always get blocked on local optimums.
 
 				In terms of computation time, RHC is the fastest algorithm of the four as we can see on figure \ref{ff:all_time}. Again that is explained by the simplicity of the algorithm.
 			\subsubsection*{Simulated Annealing}
@@ -275,18 +278,13 @@
 
 				We can see on figure \ref{ff:sa_cooling} that the best accuracy is given by a cooling factor of 0.95. The more the cooling factor is high, the more the accuracy seems to increase. That means that this problem works well with a temperature decreasing quickly.
 
-				As we can wee on figure \ref{ff:sa_initial_temp}, the initial temperature does not really affect the accuracy of the SA optimizer.
+				As we can wee on figure \ref{ff:sa_initial_temp}, the initial temperature does not really affect the median accuracy of the SA optimizer.
 
 				In terms of computation time, SA is the fastest algorithm of the four, with RHC, as we can see on figure \ref{ff:all_time}.
 
 				To conclude, SA gives the best results on this problem with a fast computation time. It is perfectly suited for this problem. It is interesting to see the differencies of results between RHC and SA. Just by introducing some exploration as SA does, we can see that the results are much better.
 			\subsubsection*{Genetic Algorithm}
-				GA gives the second best results on this problem after SA and MIMIC. We can see on figure \ref{ff:ga} the impact of the following parameters:
-				\begin{itemize}
-					\item Population size
-					\item Mutate Number
-					\item Mate Number
-				\end{itemize}
+				GA gives the second best results on this problem after
 
 				\begin{figure}[h]
 					\centering
@@ -314,19 +312,12 @@
 					\label{ff:ga}
 				\end{figure}
 
-				We can see on figure \ref{ff:ga_pop} that the best accuracy is given by a population size of 600. The more the population size is high, the more the accuracy seems to increase. That means that this problem works well with a big population.
-
-				The figure \ref{ff:ga_mutate} shows that the best accuracy is given by a mutate number of 10 and the worst by a mutate number of 110. Like in the previous problem, the optimiser works well with a small mutate number.
-
-				Finally the figure \ref{ff:ga_mate} shows that the best accuracy is given by a mate number of 250. For that parameter it does not seem to have a linear impact on the accuracy. So finally the best optimisation for that problem is given by a relatively high population size (600), a small mutate number (10) and a mate number of 250.
+				SA and MIMIC. We can see on figure \ref{ff:ga} the impact of the different parameters.
+				The best accuracy is given by a population size of 600. The best accuracy is given by a mutate number of 10 and the worst by a mutate number of 110. Like in the previous problem, the optimiser works well with a small mutate number. Finally the figure \ref{ff:ga_mate} shows that the best accuracy is given by a mate number of 250. For that parameter it does not seem to have a linear impact on the accuracy. We can explain that by the fact that mixing two strings together in the crossover process does not really make sens as the flip-flop string must be synchronized to work properly. So finally the best optimisation for that problem is given by a relatively high population size (600), a small mutate number (10) and a mate number of 250.
 
 				In terms of computation time, GA do not perform very well. It is the slowest algorithm after MIMIC, as we can see on figure \ref{ff:all_time}.
 			\subsubsection*{MIMIC}
-				MIMIC gives one of the best results on this problem with SA. We can see on figure \ref{ff:mimic} the impact of the following parameters:
-				\begin{itemize}
-					\item Number of samples
-					\item Number of samples to keep
-				\end{itemize}
+				MIMIC gives one of the best results on this problem with SA
 
 				\begin{figure}[h]
 					\centering
@@ -347,7 +338,7 @@
 					\label{ff:mimic}
 				\end{figure}
 
-				We can see on figure \ref{ff:mimic_samples} that the best accuracy is given by a number of samples of 50. On figure \ref{ff:mimic_to_keep} we can see that the best accuracy is given by a number of estimators kept of 10. We have here the same results as in the previous problem.
+				We can see on figure \ref{ff:mimic_samples} that the best accuracy is given by a number of samples of 50. On figure \ref{ff:mimic_to_keep} we can see that the best accuracy is given by a number of estimators kept of 10. As for GA, MIMIC do not take advantage of his complexity to find good solutions quickly. This probably comes from the fact that setting one bit to a particular value is not good or bad, without knowing the value of its neighbor.
 
 				In terms of computation time, MIMIC is again the slowest algorithm of the four, as we can see on figure \ref{ff:all_time}.
 		\subsection{Four Peaks Problem}
@@ -392,9 +383,10 @@
 					\label{fp:all}
 				\end{figure}
 			\subsubsection*{Randomised Hill Climbing}
-				RHC goes not perform well on this problem. We can see on figure \ref{fp:all_accuracy} that it only finds the local optima. The fact that RHC does not explore the space of solutions is the reason why it does not find the global optima. We can see on figure \ref{fp:all_time} that RHC is the fastest algorithm of the four.
+				RHC goes not perform well on this problem. We can see on figure \ref{fp:all_accuracy} that it only finds the local optima. That can be explained by the fact that the two  basin of attraction of the two suboptimal peaks are much bigger than the ones of the
+				optimal peak.
 			\subsubsection*{Simulated Annealing}
-				SA does not do much better that RHC. It sometimes manage to find the global optimum, but fails the most of the time. On figure \ref{fp:sa}, we can see that the colling factor as well as the initial temperature do not have a real impact on the accurace of SA. We can see on figure \ref{fp:all_time} that SA is the second fastest algorithm of the four. Unfortunately, even if SA introduce exploration compared to RHC, it does not manage to find the global optima most of the time. We will see that the crossover introduce by GA will give us better results.
+				SA does not do much better that RHC. It sometimes manage to find the global optimum, but fails the most of the time. On figure \ref{fp:sa}, we can see that the colling factor as well as the initial temperature do not have a real impact on the accurace of SA. Unfortunately, even if SA introduce exploration compared to RHC, it does not manage to find the global optima most of the time. We will see that the crossover introduce by GA will give us better results.
 
 				\begin{figure}[h]
 					\centering
@@ -415,7 +407,7 @@
 					\label{fp:sa}
 				\end{figure}
 			\subsubsection*{Genetic Algorithm}
-				GA is the only algorithm to manage to find the global optima. Let's the impact on the accuracy of the following parameters:
+				GA is the only algorithm to manage to find the global optima. Figure \ref{fp:ga} shows the impact of the following parameters on the accuracy of GA:
 				\begin{itemize}
 					\item Population Size
 					\item Mutate Number
@@ -448,7 +440,7 @@
 					\label{fp:ga}
 				\end{figure}
 
-				We can see on figure \ref{fp:ga_pop} that the accuracy is heavely impacted by the population size. With a population size of 100, GA does not manage to find the global optima. With a population size above 200, it manages. But there is no real improvement with the different population sizes above 200. We can explain the fact that a small population size does not get good results by the fact that the population is not big enough to explore the space of solution and quickly get stuck on a local optima.
+				We can see on figure \ref{fp:ga_pop} that the accuracy is heavely impacted by the population size. With a population size of 100, GA does not manage to find the global optima. With a population size above 200, it manages. But there is no real improvement with the different population sizes above 200. We can explain the fact that a small population size does not get good results by the fact that the population is not big enough to explore the space of solution and quickly get stuck on local optima.
 
 				Let's see the importance of the mutate number. We present the results on figure \ref{fp:ga_mutate} with a population size of 600. We can see as before that the best results are obtained with a small mutate number. We can explain this by the fact that a small mutate number will introduce more exploration in the population and will allow the population to get out of local optima.
 
@@ -479,7 +471,7 @@
 					\label{fp:mimic}
 				\end{figure}
 		\subsection*{Conclusion}
-			To conclude we saw the behaviour of the different algorithms on the different problems. We saw that RHC is the basic one. It gives poor results but is fast. SA is an improvement of RHC. It gives better results in general and is still as fast as RHC. GA and MIMIC are often the best optimisers. GA introduc the concept of population and crossover between iterations while MIMIC uses a probabilistic model to estimate the probability of a solution to be the best one which makes it the slower optimiser considered here.
+			To conclude we saw the behaviour of the different algorithms on the different problems. We saw that RHC is the basic one. It gives poor results but is fast. SA is an improvement of RHC. It gives better results in general and is still as fast as RHC. GA and MIMIC are often the best optimisers. GA introduces the concept of population and crossover between iterations while MIMIC uses a probabilistic model to estimate the probability of a solution to be the best one which makes it the slower optimiser considered here.
 	\section{Neural Networks}
 		\subsection*{Introduction}
 			In this section we will discuss the results of the randomised optimisation algorithms for training a neural network. There is some difference from the problems treated in the last section, mainly due to the supposed continuity of the weights in an artificial neural network. This can lead to issues when we want to to define a neighbor. The chosen solution adopted here is to update one weight by a random factor.
@@ -496,11 +488,11 @@
 			We can see on figure \ref{g:all} there is no need to seek for more complex networks.
 			Adding new weight would only increase the computation time without improving the accuracy, and also may lead to overfitting.
 
-			As an overview of the results, we can see that the best accuracy of 1.0 is find by each optimiser. One thing that is noticeable on \ref{g:all} is the fast variation on the curves. Those variations are not easy to explain as they are present with RHC algorithm which does not permit the result to decrease. One possible explaination would be that the plotted metric is not the same as the one used for training. In fact, the first is sum of squared errors while the second is the ratio between the number of correctly classified sample on the total number of sample. Thus, the accuracy probably fell down when the network learns that it's better not to be a bit wrong on every thing rather than being correct on the wanted value.
+			As an overview of the results, we can see that the best accuracy of 1.0 is find by each optimiser. One thing that is noticeable on figure \ref{g:all} is the fast variation on the curves. Those variations are not easy to explain as they are present with RHC algorithm which does not permit the result to decrease. One possible explaination would be that the plotted metric is not the same as the one used for training. In fact, the first is sum of squared errors while the second is the ratio between the number of correctly classified sample on the total number of sample. Thus, the accuracy probably fell down when the network learns that it's better not to be a bit wrong on every thing rather than being correct on the wanted value.
 
-			Another thing to notice is that the training and the validation accuracy are very close. It could mean that the training and testing datasets are not independent. But we checked that it was not the case. So this means that the neural network is able to generalize to new data as well as it does not overfit. From now on, we will only display the validation accuracy on the figures as the curves are very similar to the training accuracy.
+			Another thing to notice is that the training and the validation accuracy are very close. It could mean that the training and testing datasets are not independent. But I checked that it was not the case. So this means that the neural network is able to generalize to new data as well as it does not overfit. From now, we will only display the validation accuracy on the figures as the curves are very similar to the training accuracy.
 
-			In the next sections we will study more in depth the training process algorithm by algorithm.
+			In the next sections we will study more in depth the training process for each algorithm.
 
 			\begin{figure}[h]
 				\centering
@@ -521,7 +513,7 @@
 				\label{g:all}
 			\end{figure}
 		\subsection{Randomized Hill Climbing}
-			We present on figure \ref{g:rhc} the results obtained with RHC. RHC succeeds to get the best accuracy on the validation set with all the different networks tested. The difference is the number of iteration required to converge. The best result is obtained with the network $(35)$ with an accuracy of 1.0 after only 1800 iterations. The worst result is obtained with the network $(30, 10)$ with an accuracy of 1.0 after 6200 iterations. An optimised network for that problem that gives a perfect iteration in the most efficient way is therefore the network $(35)$.
+			We present on figure \ref{g:rhc} the results obtained with RHC. RHC succeeds to get the best accuracy on the validation set with all the different networks tested. The difference is the number of iteration required to converge. The best result is obtained with the network $(35)$ with an accuracy of 1.0 after only 1800 iterations. The worst result is obtained with the network $(30, 10)$ with an accuracy of 1.0 after 6200 iterations. The network $(30, 10)$ is too complex here while the network $(5)$ is too simple. An optimised network for that problem that gives a perfect iteration in the most efficient way is therefore the network $(35)$.
 
 			RHC is again the fastest algorithm. It took approximately 1h to train all the different networks.
 
@@ -532,7 +524,7 @@
 				\label{g:rhc}
 			\end{figure}
 		\subsection{Simulated Annealing}
-			We present on figure \ref{g:sa} the results obtained with SA. SA also succeeds to get the best accuracy on the validation set. But that time not for all the networks. The best netwirk with RHC is the worst with SA. The network $(35)$ only manage to get an accuracy of 0.5 after 7000 iterations. The best result here is obtained with the network $(30, 10)$ with an accuracy of 1.0 after 4000 iterations. The other networks converge slower. I cannot really explain why the network $(35)$ is so bad with SA. It is possible that the network is too complex for the SA algorithm to find a good solution. The network $(30, 10)$ is the best network for that problem with SA.
+			We present on figure \ref{g:sa} the results obtained with SA. SA also succeeds to get the best accuracy on the validation set. But that time not for all the networks. The best network with RHC is the worst with SA. The network $(35)$ only manage to get an accuracy of 0.5 after 7000 iterations. The best result here is obtained with the network $(30, 10)$ with an accuracy of 1.0 after 4000 iterations. The other networks converge slower. I cannot really explain why the network $(35)$ is so bad with SA and $(30, 10)$ suddently become the best network.
 
 			It took approximately 2h to train all the different networks with SA.
 
@@ -551,4 +543,8 @@
 				\caption{Accuracy with GA for different layers}
 				\label{g:ga}
 			\end{figure}
+		\subsection*{Conclusion}
+			To conclude we can say that randomised algorithms can be helpful to optimise the weights of a neural network. But I guess this heavely depends on the dataset we are considering. Here, the gender dataset turned to be really well suited for neural networks.
+	\section{Conclusion}
+		During this work I learned in a practical way the characteritics of different randomised optimisers. I saw that the fine tuning of the parameters were not the most important thing as it can be in supervised learning. But randomised optimisation and supervised learning do not have the same objective. The last part of this report showed that the first one can be used for optimising the second one. As always each optimiser has its specificities and it is important to know them to be able to use in a specific problem the most appropriate one.
 \end{document}
