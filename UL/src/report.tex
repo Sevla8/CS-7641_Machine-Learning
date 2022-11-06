@@ -65,7 +65,7 @@
 		In this article, I will focus on dimensionality reduction and clustering. I will apply clustering algorithms on two datasets and describe the results. I will also apply dimensionality reduction algorithms on the same datasets and see how the clustering algorithms perform on the reduced datasets. I will also discuss the results of the dimensionality reduction algorithms. Finally I will run one more time my Neural Network learner on the projected data and see how it performs differently.
 	\section{Datasets}
 		\subsection{Iris Dataset}
-			The Iris dataset is a multivariate dataset that contains 150 observations of iris flowers. The dataset contains 4 features: sepal length, sepal width, petal length, and petal width. The dataset also contains the class of each observation, which is the species of the flower. I found this dataset interesting because of the low dimension space it covers, allowing me to easely plot understandable 2D figures to show the results of clustering and dimension reduction algorithms. Also the classes are pretty well separated so we can suppose that clustering algorithms will perform well on this dataset. Figure \ref{fig:iris_org} shows the distribution of the classes in the dataset. We can see that the classes are well separated so we can suppose that clustering algorithms will perform well on this dataset.
+			The Iris dataset is a multivariate dataset that contains 150 observations of iris flowers. The dataset contains 4 features: sepal length, sepal width, petal length, and petal width. The dataset also contains the class of each observation, which is the species of the flower. I found this dataset interesting because of the low dimension space it covers, allowing me to easely plot understandable 2D figures to show the results of clustering and dimension reduction algorithms. Figure \ref{fig:iris_org} shows the distribution of the classes in the dataset. We can see that the classes are well separated so we can suppose that clustering algorithms will perform well on this dataset.
 
 			\begin{figure}[h]
 				\centering
@@ -107,7 +107,7 @@
 	\section{Clustering}
 		Both \textit{K-means} and \textit{Expectation Maximization (EM)} gave good results applied to both datasets.
 		\subsection{Iris Dataset}
-			We present on figure \ref{fig:iris_kmeans} the results of K-means applied on Iris dataset. We can see that KMeans obtain an almost perfect classification result. The typical potatoid shape of K-means clusters is easely distinguishable on figure \ref{fig:iris_kmeans_pet}. This particular bias of K-means is also the reason why it makes some mistakes as we can see on figure \ref{fig:iris_kmeans_sep}.
+			We present on figure \ref{fig:iris_kmeans} the results of K-means applied on Iris dataset. We can see that K-means obtains an almost perfect classification result. The typical potatoid shape of K-means clusters is easely distinguishable on figure \ref{fig:iris_kmeans_pet}. This particular bias of K-means is also the reason why it makes some mistakes as we can see on figure \ref{fig:iris_kmeans_sep}.
 
 			\begin{figure}[h]
 				\centering
@@ -127,7 +127,7 @@
 				\label{fig:iris_kmeans}
 			\end{figure}
 
-			EM performs even better than kmeans on Iris dataset. We can notice some mistakes on the edges between blue and white areas that are visible on figure \ref{fig:iris_EM_pet}. That is not surprising as the two clusters are very close on every dimensions. In addtion we can note that given it's nature EM let more the blue and white cluster to mix together on figure \ref{fig:iris_EM_sep}. This is due to the large space between points in these parts of the two clusters.
+			EM performs even better than k-means on Iris dataset. We can notice some mistakes on the edges between blue and white areas that are visible on figure \ref{fig:iris_EM_pet}. That is not surprising as the two clusters are very close on every dimensions. In addtion we can note that given it's nature EM let more the blue and white cluster to mix together on figure \ref{fig:iris_EM_sep}. This is due to the large space between points in these parts of the two clusters.
 
 			\begin{figure}[h]
 				\centering
@@ -169,7 +169,7 @@
 				\label{fig:g_kmeans}
 			\end{figure}
 
-			EM performs better than K-means again on the Gender dataset. Results are pretty similar to K-means. However, as we can see on figure \ref{fig:g_EM_sep}, EM obtain less misclassification than K-means. This can be due to the fact that EM is a soft clustering algorithm, meaning that each data point can belong to multiple labels as they have a probability associated to each label. It allows EM to to get better results here.
+			EM performs better than K-means again on the Gender dataset. Results are pretty similar to K-means. However, as we can see on figure \ref{fig:g_EM_sep}, EM obtains less misclassification than K-means. This can be due to the fact that EM is a soft clustering algorithm, meaning that each data point can belong to multiple labels as they have a probability associated to each label. It allows EM to to get better results here.
 
 			\begin{figure}[h]
 				\centering
@@ -189,7 +189,7 @@
 				\label{fig:g_EM}
 			\end{figure}
 		\subsection{Conclusion}
-			To conclude, we can say that K-means and EM are two very different algorithms. K-means is a hard clustering algorithm that assumes that the clustering is spherical and that each dimension is weighted equally important. EM is a soft clustering algorithm that does not assume anything on the clustering. However, both algorithms are very efficient and can be used in many different applications. However, we saw that K-means has important biases that can lead to bad results. For example if the each labels would have different densities or if the data is would not have been generated from a spherical distribution.
+			To conclude, we can say that K-means and EM are two very different algorithms. K-means is a hard clustering algorithm that assumes that the clustering is spherical and that each dimension is weighted equally important. EM is a soft clustering algorithm that does not assume anything on the clustering. However, both algorithms are very efficient and can be used in many different applications. However, we saw that K-means has important biases that can lead to bad results. For example if each labels would have different densities or if the data would not have been generated from a spherical distribution.
 	\section{Dimensionality Reduction}
 		\subsection{Introduction}
 			Reducing the number of dimensions of a dataset is a very important task in machine learning especially because of the curse of dimension. In this section, we will present four dimensionality reduction algorithms:
@@ -200,7 +200,7 @@
 				\item Linear Discriminant Analysis (LDA)
 			\end{itemize}
 		\subsection{Principal Component Analysis}
-			Something interesting with PCA is that we can rank the selected dimensions according to their eigenvalue. For instance, we can see on figure \ref{fig:pca_score} the eigenvalues and their sum according to the number of dimensions. In both cases, eigenvalues follow an exponentially decrease with the number of dimensions. In the case of Iris dataset, we can notice that one dimension only already give a good description of the dataset as well as in the case of the Gender dataset.
+			Something interesting with PCA is that we can rank the selected dimensions according to their eigenvalue. For instance, we can see on figure \ref{fig:pca_score} the eigenvalues and their sum according to the number of dimensions. In both cases, eigenvalues follow a linear decrease with the number of dimensions. In the case of Iris dataset, we can notice that one dimension only already give a good description of the dataset as well as in the case of the Gender dataset.
 
 			\begin{figure}[h]
 				\centering
@@ -233,7 +233,7 @@
 				\begin{subfigure}[t]{0.49\columnwidth}
 					\centering
 					\includegraphics[width=\linewidth]{../graphics/pca_g_0_1_label.png}
-					\caption{Starcraft dataset}
+					\caption{Gender dataset}
 					\label{fig:pca_g}
 				\end{subfigure}
 				\caption{Representation of the classes after projection in the best plan found by PCA}
@@ -242,9 +242,9 @@
 
 			In a clustering point of view, K-means obtained worse results than on the original dataset. This can probably be explained by the fact that K-means considers all dimensions as equally important. However, in this case, we saw that the first dimension is much more discriminant than the second one. EM obtained here almost a perfect result. We obtained similar results for the Gender dataset.
 
-			In conclusion, PCA is a fast and efficient algorithm to reduce the number of dimensions. It also provides a information to rank the dimensions according to their importance.
+			In conclusion, PCA is a fast and efficient algorithm to reduce the number of dimensions. It also provides information to rank the dimensions according to their importance.
 		\subsection{Independent Component Analysis}
-			ICA is a dimensionality reduction algorithm that is based on the assumption that the data is a linear combination of independent sources. The goal of ICA is to find the independent sources that are the most important to describe the data. In this section, we will present the results of ICA on both datasets. In the case of the Iris dataset, we can see on figure \ref{fig:ica_iris} that the results are verry similar to those from PCA. If we perform an axial symmetry by an horizontal line on the top of the figure, we get the nearly the same results as for PCA. Thus, we can apply the same conclusion than for PCA here. However, it is important to notice that the scale is different. For ICA, the ratio of the range of axis 0 over the range of axis 1 is about 0.7, while it was 2.4 for PCA, explaining the clustering difference. For the Gender dataset, we obtained exactly the same transformation as for PCA as we can see on figure \ref{fig:ica_g}.
+			ICA is a dimensionality reduction algorithm that is based on the assumption that the data is a linear combination of independent sources. The goal of ICA is to find the independent sources that are the most important to describe the data. In this section, we will present the results of ICA on both datasets. In the case of the Iris dataset, we can see on figure \ref{fig:ica_iris} that the results are verry similar to those from PCA. If we perform an axial symmetry by an horizontal line on the top of the figure, we get nearly the same results as for PCA. Thus, we can apply the same conclusion than for PCA here. However, it is important to notice that the scale is different. For ICA, the ratio of the range of axis 0 over the range of axis 1 is about 0.7, while it was 2.4 for PCA, explaining the clustering difference. For the Gender dataset, we obtained exactly the same transformation as for PCA as we can see on figure \ref{fig:ica_g}.
 
 			\begin{figure}[h]
 				\centering
@@ -264,11 +264,11 @@
 				\label{fig:ica}
 			\end{figure}
 
-			In a clustering perspective, due to the change of proportions, both K-means and EM wrongly split the two clusters on the right for the Iris dataset and split them horizontally intead of vertically. In addition, K-means managed to misclassify one point in the left cluster. Like for PCA, the dimension 0 is the one with the more information. Reducing its amplitude regarding to the other dimension results in giving more importance to that last dimension. For the Gender dataset, the results are again coherent with the ones from Iris. Both K-means and EM obtained poor results. EM is the most impacted by this change of scale. Which seems fair as we know that EM does not assume any equal importance between dimensions.
+			In a clustering perspective, due to the change of proportions, both K-means and EM wrongly split the two clusters on the right for the Iris dataset and split them horizontally instead of vertically. In addition, K-means managed to misclassify one point in the left cluster. Like for PCA, the dimension 0 is the one with the more information. Reducing its amplitude regarding to the other dimension results in giving more importance to that last dimension. For the Gender dataset, the results are again coherent with the ones from Iris. Both K-means and EM obtained poor results. K-means is the most impacted by this change of scale. Which seems fair as we know that EM does not assume any equal importance between dimensions.
 
 			In conclusion, ICA gave very similar results than PCA. However, because of the difference of scale it gave very poor results on clustering.
 		\subsection{Randomized Projections}
-			Randomized Projections (RP) is a time efficient algorithm to reduce dimensions. Its random specificity let us exoect worse results than the methods above. On the Iris dataset, RP gave average results. We can see on Figure \ref{fig:rnd_iris} that the global shape is close to the shape obtained by PCA and ICA, with one cluster far from the two others which are very close. This projection is far from optimal in a clustering point of view, but the clusters are still there. For the Gender dataset, results are more chaotic. We can see on Figure \ref{fig:rnd_g} that the two classes are mixed together. Moreover, the algorithm is not stable as the results are different each time we run it. This is due to the random nature of the algorithm.
+			Randomized Projections (RP) is a time efficient algorithm to reduce dimensions. Its random specificity let us expect worse results than the methods above. On the Iris dataset, RP gave average results. We can see on Figure \ref{fig:rnd_iris} that the global shape is close to the shape obtained by PCA and ICA, with one cluster far from the two others which are very close. This projection is far from optimal in a clustering point of view, but the clusters are still there. For the Gender dataset, results are more chaotic. We can see on Figure \ref{fig:rnd_g} that the two classes are mixed together. Moreover, the algorithm is not stable as the results are different each time we run it. This is due to the random nature of the algorithm.
 
 			\begin{figure}[h]
 				\centering
@@ -288,13 +288,13 @@
 				\label{fig:rnd}
 			\end{figure}
 
-			In a clustering point of view, K-means and EM obtained very poor results in the case of Iris dataset as well as in the case of the Gender dataset. Either K-means and EM are impacted by the poor dimension reduction operated by RP algorithm.
+			In a clustering point of view, K-means and EM obtained very poor results in the case of Iris dataset as well as in the case of the Gender dataset. Either K-means and EM are impacted by the poor dimensionality reduction operated by RP algorithm.
 
-			Therefore, RP does not obtained good results on applying clustering algorithms. Except its low time complexity, like using it as a reference to evaluate the performance of other dimension reduction algorithms, we did not see its interest on both datasets.
+			Therefore, RP does not obtained good results on applying clustering algorithms. Except its low time complexity, like using it as a reference to evaluate the performance of other dimensionality reduction algorithms, we did not see its interest on both datasets.
 		\subsection{Linear Discriminant Analysis}
-			LDA is different from the other dimensions reduction algorithms we have seen so far. It is the only one to include the labels in order to chose the best projection. This fact transforms the clustering into a supervised problem. That makes LDA biased toward the labels we are looking for. This bias is interesting here to see how this information change the results, but usually clustering is used when we do not know what we are looking for, case where LDA is inappropriate.
+			LDA is different from the other dimensionality reduction algorithms we have seen so far. It is the only one to include the labels in order to chose the best projection. This fact transforms the clustering into a supervised problem. That makes LDA biased toward the labels we are looking for. This bias is interesting here to see how this information changes the results, but usually clustering is used when we do not know what we are looking for, case where LDA is inappropriate.
 
-			We can see on figure \ref{fig:lda_iris} the projection of the Iris dataset onto two dimensions. We can see that the two classes are well separated. Two classes are still near from each other, but that is coherent with the original data. We can also look at the range ratio, but it will not be useful as axis 0 already give most of the information needed to correctly classify the data, as long as this ration stay near 1, we can expect good clustering results later. Therefore, LDA projects the Iris dataset into nearly one dimension, showing that with only a linear combination of the variable we have enough information to find all the classes of this dataset. LDA does not permit to project in more than one dimension in the case of the Gender dataset, as we can see on figure \ref{fig:lda_g}. The projection is pretty good as the two classes are well separated.
+			We can see on figure \ref{fig:lda_iris} the projection of the Iris dataset onto two dimensions. We can see that the two classes are well separated. Two classes are still near from each other, but that is coherent with the original data. We can also look at the range ratio, but it will not be useful as axis 0 already give most of the information needed to correctly classify the data, as long as this ratio stay near 1, we can expect good clustering results later. Therefore, LDA projects the Iris dataset into nearly one dimension, showing that with only a linear combination of the variable we have enough information to find all the classes of this dataset. LDA does not permit to project in more than one dimension in the case of the Gender dataset, as we can see on figure \ref{fig:lda_g}. The projection is pretty good as the two classes are well separated.
 
 			\begin{figure}[h]
 				\centering
@@ -331,7 +331,7 @@
 
 			I will use here the same dataset as in the homework 1 as well as the same network structure. I set most of the parameters explored the same as in homework 1.  For instance, I used batch normalization in all the experiment, as well as the rmsprop optimizer from Keras. Thus, the reader can easily compare the actual results with the previous ones. I will also explore some new parameters such as the dimensionality reduction algorithm, the number of dimensions kept and the shape of the hidden layers. The dimensionality reduction was first fit on the train dataset and then applied to both train and test data. Repartition between train and test reminded the same as in the first assignment.
 
-			We can see on figure \ref{fig:per_all_rm} that not all the different dimensionality reduction algorithms converge to the same accuracy. RP gave the the worst results while PCA, ICA and LDA gave the same median accuracy. We can also notice that RP is the slowest method that converges according to the number of epochs while LDA is the fastest. It is also interesting to notice that on figure \ref{fig:per_all_nf}, the dataset with a number of dimension reduced to one is the fastest to converge while the one reduced to 6 dimension is the third fastest. Here they all converge to the same accuracy, which is the purpose of feature selection: reducing the number of dimensions without losing too much information. However the median accuracy is a little bit lower than without feature selection if we recall homework 1. Although the median accuracy is the same, we have to note that the minimum accuracy happens to reach 0.5 in the case of 1 feature with RP and 3 features with ICA.
+			We can see on figure \ref{fig:per_all_rm} that not all the different dimensionality reduction algorithms converge to the same accuracy. RP gave the worst results while PCA, ICA and LDA gave the same median accuracy. We can also notice that RP is the slowest method that converges according to the number of epochs while LDA is the fastest. It is also interesting to notice that on figure \ref{fig:per_all_nf}, the dataset with a number of dimension reduced to one is the fastest to converge while the one reduced to 6 dimension is the third fastest. Here they all converge to the same accuracy, which is the purpose of feature selection: reducing the number of dimensions without losing too much information. However the median accuracy is a little bit lower than without feature selection if we recall homework 1. Although the median accuracy is the same, we have to note that the minimum accuracy happens to reach 0.5 in the case of 1 feature with RP and 3 features with ICA.
 
 			Let's now study the specific results for each dimensionality reduction algorithm.
 			\begin{figure}[h]
@@ -356,7 +356,7 @@
 
 			It is interesting to notice that like in homework 1, the layer structure that get fastest convergence is the most complex one : $(30, 10)$. The accuracy is not really affected by the network structure. We can see on figure \ref{fig:per_pca_nf_3525} the effect of the number of features for $(10)$ and $()$ layers. Here we see that the convergence speed highly depends on the number of features. The fastest convergence is given with only one feature and decreases while the features increase.
 
-			We have also notice that the validation accuracy of small layers is rising slower than complex layers. This is probably due to the fact that the bigger weights, the bigger layers are easier to fit into a local optimum. So if we want to approximate a complex function it's easier with lot of simple ones than than with a few of complex ones, even if the later is probably more reliable.
+			We have also notice that the validation accuracy of small layers is rising slower than complex layers. This is probably due to the fact that the bigger weights, the bigger layers are easier to fit into a local optimum. So if we want to approximate a complex function it's easier with a lot of simple ones than than with a few of complex ones, even if the later is probably more reliable.
 
 			\begin{figure}[h]
 				\centering
@@ -376,7 +376,7 @@
 				\label{fig:per_pca}
 			\end{figure}
 
-			To conclude, PCA is a good dimensionality reduction algorithm to use with a neural network. The results are not as good as in the original dataset and the converge is a little bit slower. However, the results are still very good and the converge is still very fast. It is important to note that the number of features must be chosen carefully. If too many features are selected, the neural network will tend to overfit on some datasets. On the other hand, if too few features are selected, the neural network will not be able to learn enough to perform well.
+			To conclude, PCA is a good dimensionality reduction algorithm to use with our dataset. The results are not as good as in the original dataset and the converge is a little bit slower. However, the results are still very good and the converge is still very fast. It is important to note that the number of features must be chosen carefully. If too many features are selected, the neural network will tend to overfit on some datasets. On the other hand, if too few features are selected, the neural network will not be able to learn enough to perform well.
 		\subsection{Independent Component Analysis}
 			The first thing we can notice on figure \ref{fig:per_ica_nf} is that PCA gives the highest variation in terms of accuracy. The median accuracy value is not really affected by the number of features, however, the minimum accuracy is. We can see that it happens, with 3 features, to get a score of only 0.5. ICA assumes that at most one subcomponent is Gaussian and that the subcomponents are statistically independent from each other. The results we get let us think that this assumption is not always true. We can also see that the convergence speed is not really affected by the number of features.
 
@@ -407,7 +407,7 @@
 
 			Here again the layers which gave the best results are the most complex ones. It definitely seems that feature reduction does not seem to impact the optimal structure of the network.
 
-			On figure \ref{fig:per_rnd_nf_3525}, we can see that that the neural network overfits with the network composed of no hidden layer. This is probably due to the fact that the neural network is not complex enough to learn the function. Hwever in all the other configurations, the neural network does not overfit. It shows that overfitting is not only dependent on the shape of the data and of the network but is also highly dependent on the content of the data. We see that RP did not produce features that were particularly relevant on the train dataset but were completely uncorrelated to the classes in the test dataset. As the results show, that comes with the cost of a lower accuracy.
+			On figure \ref{fig:per_rnd_nf_3525}, we can see that that the neural network overfits with the network composed of no hidden layer. This is probably due to the fact that the neural network is not complex enough to learn the function. However in all the other configurations, the neural network does not overfit. It shows that overfitting is not only dependent on the shape of the data and of the network but is also highly dependent on the content of the data. We see that RP did not produce features that were particularly relevant on the train dataset but were completely uncorrelated to the classes in the test dataset. As the results show, that comes with the cost of a lower accuracy.
 
 			\begin{figure}[h]
 				\centering
@@ -462,7 +462,7 @@
 		\subsection{Introduction}
 			In that section, we will try to add clusters as features to the neural network. We will use the K-means algorithm to create clusters and then add them as features to the neural network. We will see if it improves the accuracy of the neural network. Adding that information can provide additional information to the neural network, particularly if some cluster is highly correlated to a given class.
 
-			As a global trend, we can see on figure \ref{fig:clusper_all}, that the best results are a little bit better than the ones in the previous section, with an improvement of 0.02 in accuracy. Another difference, as we can see on figure \ref{fig:clusper_all_rm}, is that every dimensionality reduction method gave very close median results, especially in the convergence speed, which was not the case in the previously.
+			As a global trend, we can see on figure \ref{fig:clusper_all}, that the best results are a little bit better than the ones in the previous section, with an improvement of 0.02 in accuracy. Another difference, as we can see on figure \ref{fig:clusper_all_rm}, is that every dimensionality reduction method gave very close median results, especially in the convergence speed, which was not the case in the previous section.
 
 			We can also see on figure \ref{fig:clusper_all_cm} that while EM was performing better than k-means in section 4, here k-means gets better results no matter the metric we use. That is a good improvement as k-means is much faster than EM.
 
@@ -493,7 +493,7 @@
 				\label{fig:clusper_all_layers}
 			\end{figure}
 		\subsection{Principal Component Analysis}
-			PCA follows here the general trend, in such a way that we can qualify it as the median dimension reduction algorithm here. Thus it follows all general observation discussed above and give only little advantage to K-means over EM. It also allows k-means to have less variation especially when the number of epochs is low as we can see on figure \ref{fig:clusper_pca_cm}.
+			PCA follows here the general trend, in such a way that we can qualify it as the median dimensionality reduction algorithm here. Thus it follows all general observation discussed above and give only little advantage to K-means over EM. It also allows k-means to have less variation especially when the number of epochs is low as we can see on figure \ref{fig:clusper_pca_cm}.
 
 			\begin{figure}[h]
 				\centering
@@ -511,7 +511,7 @@
 				\label{fig:clusper_ica_cm}
 			\end{figure}
 		\subsection{Randomized Projections}
-			RP is the only method that let the neural network get better results with EM over k-means as we can see on figure \ref{fig:clusper_rnd_cm}. Adding clusters as features also permits RP to get accuracy as good as the other methods. However the variation is still very high. compared to the other methods. It is interesting to get as good results as we saw in previous section that RP method did not give good results with clustering.
+			RP is the only method that let the neural network get better results with EM over k-means as we can see on figure \ref{fig:clusper_rnd_cm}. Adding clusters as features also permits RP to get accuracy as good as the other methods. However the variation is still very high compared to the other methods. It is interesting to get as good results as we saw in previous section that RP method did not give good results with clustering.
 
 			\begin{figure}[h]
 				\centering
@@ -531,7 +531,7 @@
 		\subsection{Conclusion}
 			To conclude, we can say that adding the result of a clustering algorithm as feature for a neural network helps to get better results, at least in our specific case. One explanation of the results we obtained here is that the clusters generated on the train dataset gave good insights to find the desired class and that those clusters extend to the test data set. This conclusion is strengthened by the fact that accuracy on the train data set converge far quicker toward perfect results on this section than on last section. So we can assume that the neural network takes advantage here to learn more efficiently thanks to the cluster information which is coherent from a dataset to the other.
 	\section{Conclusion}
-		In that report we discovered the benefits and drawbacks of dimensionality reduction methods and clustering algorithms. We saw that dimensionality reduction can be a powerful tool. However not all algorithms are well adapted to all datasets. One difficulty is to find the appropriate method as well as the appropriate number of dimensions to keep. We also saw that clustering algorithms can help find information in the data which is the purpose of data mining. We also explored the possibility to use dimensionality reduction to train a neural network. We saw that even if in a theoretical point of view it is better to have fewer dimensions as input, loss of information happens resulting in a lower accuracy. Finally, we saw that adding the result of a clustering algorithm as feature for a neural network can help to get better results.
+		In that report we discovered the benefits and drawbacks of dimensionality reduction methods and clustering algorithms. We saw that dimensionality reduction can be a powerful tool. However not all algorithms are well adapted to all datasets. One difficulty is to find the appropriate method as well as the appropriate number of dimensions to keep. We also saw that clustering algorithms can help to find information in the data which is the purpose of data mining. We also explored the possibility to use dimensionality reduction to train a neural network. We saw that even if in a theoretical point of view it is better to have fewer dimensions as input, loss of information happens resulting in a lower accuracy. Finally, we saw that adding the result of a clustering algorithm as features for a neural network can help to get better results.
 
 		Dimensionality reduction was a concept I have heard of before, but which I never really used before that work. It was very interesting to learn more about, and have a little experience with the different methods we used. It is not the same for clustering as I took a data mining class before. As I had some little experience on it, the different experiments on this concept may seem a little bit light. If that is the case, I apologize for that. I hope that the report is clear enough and that the reader will enjoy reading it.
 \end{document}
