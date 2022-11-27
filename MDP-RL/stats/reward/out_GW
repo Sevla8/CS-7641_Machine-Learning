@@ -1,0 +1,26 @@
+----------------------reward_3.0-----------------------
+-------------Value Iteration-------------
+Start
+Starting reachability analysis
+Finished reachability analysis; # states: 400
+Passes: 37
+End
+Time Elapsed: 947 ms
+Num generated: 6384; num unique: 400
+-------------Policy Iteration-------------
+Start
+Starting reachability analysis
+Finished reachability analysis; # states: 400
+Iterations in inner VI for policy eval: 409
+Iterations in inner VI for policy eval: 14
+Iterations in inner VI for policy eval: 116
+Iterations in inner VI for policy eval: 228
+Iterations in inner VI for policy eval: 46
+Iterations in inner VI for policy eval: 14
+Iterations in inner VI for policy eval: 11
+Iterations in inner VI for policy eval: 12
+Iterations in inner VI for policy eval: 1
+Total policy iterations: 9
+End
+Time Elapsed: 12260 ms
+Num generated: 6384; num unique: 400

@@ -1,0 +1,2750 @@
+!!burlap.behavior.singleagent.EpisodeAnalysis
+actionSequence: [!action 'east', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north', !action 'north', !action 'north', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'east', !action 'east', !action 'east', !action 'east',
+  !action 'east', !action 'north', !action 'north', !action 'east', !action 'east',
+  !action 'north', !action 'east', !action 'north', !action 'north', !action 'north',
+  !action 'north', !action 'north']
+rewardSequence: [-0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1,
+  -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1,
+  -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1,
+  -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1,
+  -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1,
+  -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1,
+  -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1,
+  -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1,
+  -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1,
+  -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1,
+  -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1,
+  -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1,
+  -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1,
+  -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1,
+  -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, -0.1, 5.0]
+stateSequence:
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '0'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '1'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '1'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '2'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '3'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '4'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '3'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '4'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '5'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '5'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '6'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '5'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '6'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '7'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '8'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '9'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '10'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '11'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '12'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '11'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '12'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '13'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '14'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '15'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '16'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '17'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '16'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '17'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '18'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '18'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '19'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '20'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '21'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '22'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '23'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '24'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '25'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '26'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '27'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '27'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '28'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '29'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '30'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '30'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '31'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '32'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '33'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '34'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '35'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '36'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '37'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '38'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '39'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '39'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '40'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '41'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '41'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '42'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '43'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '42'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '43'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '43'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '44'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '45'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '46'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '47'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '48'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '49'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '50'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '50'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '50'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '51'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '52'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '53'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '54'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '55'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '56'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '57'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '57'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '58'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '59'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '60'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '61'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '62'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '63'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '63'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '64'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '65'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '66'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '67'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '68'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '0'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '1'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '2'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '3'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '4'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '5'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '6'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '5'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '6'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '7'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '8'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '9'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '10'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '11'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '12'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '13'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '14'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '14'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '15'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '14'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '15'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '16'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '17'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '18'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '19'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '20'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '21'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '22'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '23'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '24'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '25'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '26'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '27'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '28'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '29'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '30'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '31'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '32'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '33'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '34'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '35'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '36'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '37'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '38'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '39'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '38'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '39'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '40'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '41'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '40'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '41'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '42'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '43'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '44'}
+    - {attribute: y, value: '69'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '44'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '45'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '46'}
+    - {attribute: y, value: '70'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '46'}
+    - {attribute: y, value: '71'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '47'}
+    - {attribute: y, value: '71'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '48'}
+    - {attribute: y, value: '71'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '49'}
+    - {attribute: y, value: '71'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '50'}
+    - {attribute: y, value: '71'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '50'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '51'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '52'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '53'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '54'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '55'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '56'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '55'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '54'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '55'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '54'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '55'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '54'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '55'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '54'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '54'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '55'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '56'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '57'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '58'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '59'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '60'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '61'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '62'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '63'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '64'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '64'}
+    - {attribute: y, value: '72'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '64'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '65'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '66'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '67'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '68'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '69'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '70'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '70'}
+    - {attribute: y, value: '74'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '71'}
+    - {attribute: y, value: '74'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '71'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '70'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '71'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '72'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '73'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '74'}
+    - {attribute: y, value: '73'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '74'}
+    - {attribute: y, value: '74'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '74'}
+    - {attribute: y, value: '75'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '75'}
+    - {attribute: y, value: '75'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '76'}
+    - {attribute: y, value: '75'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '76'}
+    - {attribute: y, value: '76'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '77'}
+    - {attribute: y, value: '76'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '78'}
+    - {attribute: y, value: '76'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '76'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '77'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '78'}
+- !!burlap.oomdp.stateserialization.simple.SimpleSerializableState
+  objects:
+  - name: location0
+    object_class: location
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}
+    - {attribute: locType, value: '0'}
+  - name: agent0
+    object_class: agent
+    values:
+    - {attribute: x, value: '79'}
+    - {attribute: y, value: '79'}

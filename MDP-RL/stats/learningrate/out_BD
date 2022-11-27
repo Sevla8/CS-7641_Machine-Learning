@@ -1,0 +1,50 @@
+----------------------learningrate_0.01-----------------------
+-------------Q Learning-------------
+Start
+Beginning Q-learning trial 1/5
+Beginning Q-learning trial 2/5
+Beginning Q-learning trial 3/5
+Beginning Q-learning trial 4/5
+Beginning Q-learning trial 5/5
+End
+Time Elapsed: 10636 ms
+----------------------learningrate_0.1-----------------------
+-------------Q Learning-------------
+Start
+Beginning Q-learning trial 1/5
+Beginning Q-learning trial 2/5
+Beginning Q-learning trial 3/5
+Beginning Q-learning trial 4/5
+Beginning Q-learning trial 5/5
+End
+Time Elapsed: 7831 ms
+----------------------learningrate_0.3-----------------------
+-------------Q Learning-------------
+Start
+Beginning Q-learning trial 1/5
+Beginning Q-learning trial 2/5
+Beginning Q-learning trial 3/5
+Beginning Q-learning trial 4/5
+Beginning Q-learning trial 5/5
+End
+Time Elapsed: 3694 ms
+----------------------learningrate_0.5-----------------------
+-------------Q Learning-------------
+Start
+Beginning Q-learning trial 1/5
+Beginning Q-learning trial 2/5
+Beginning Q-learning trial 3/5
+Beginning Q-learning trial 4/5
+Beginning Q-learning trial 5/5
+End
+Time Elapsed: 2809 ms
+----------------------learningrate_0.9-----------------------
+-------------Q Learning-------------
+Start
+Beginning Q-learning trial 1/5
+Beginning Q-learning trial 2/5
+Beginning Q-learning trial 3/5
+Beginning Q-learning trial 4/5
+Beginning Q-learning trial 5/5
+End
+Time Elapsed: 2264 ms

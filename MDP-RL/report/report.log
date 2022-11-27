@@ -1,0 +1,912 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.10.21)  27 NOV 2022 18:40
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**/home/sevla/Projects/ML/MDP/report/report.tex
+(/home/sevla/Projects/ML/MDP/report/report.tex
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-07-15> (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2021/10/04 v1.4n Standard LaTeX document class
+(/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
+)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen138
+) (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks16
+\inpenc@posthook=\toks17
+) (/usr/share/texlive/texmf-dist/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (/usr/share/texmf/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  OML/cmm/m/it --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  OMS/cmsy/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  OML/cmm/b/it --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  OMS/cmsy/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  OMX/cmex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  OT1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  OT1/cmr/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  OT1/cmr/bx/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  OT1/cmss/bx/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  OT1/cmr/bx/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  OT1/cmtt/m/n --> OT1/lmtt/m/n on input line 38.
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks18
+)
+\lst@mode=\count193
+\lst@gtempboxa=\box51
+\lst@token=\toks19
+\lst@length=\count194
+\lst@currlwidth=\dimen139
+\lst@column=\count195
+\lst@pos=\count196
+\lst@lostspace=\dimen140
+\lst@width=\dimen141
+\lst@newlines=\count197
+\lst@lineno=\count198
+\lst@maxwidth=\dimen142
+ (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count199
+\lst@skipnumbers=\count266
+\lst@framebox=\box52
+) (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+ (/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
+Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
+) (/usr/share/texlive/texmf-dist/tex/latex/appendix/appendix.sty
+Package: appendix 2020/02/08 v1.2c extra appendix facilities
+\c@@pps=\count267
+\c@@ppsavesec=\count268
+\c@@ppsaveapp=\count269
+) (/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count270
+\float@exts=\toks20
+\float@box=\box53
+\@float@everytoks=\toks21
+\@floatcapt=\box54
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2020/10/05 v1.2a Graphics/color driver for pdftex
+))) (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2021-02-22 v5.2l context-sensitive quotations (JAW)
+ (/usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count271
+)
+\csq@reset=\count272
+\csq@gtype=\count273
+\csq@glevel=\count274
+\csq@qlevel=\count275
+\csq@maxlvl=\count276
+\csq@tshold=\count277
+\csq@ltx@everypar=\toks22
+ (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2021-02-22 v5.2l csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+ (/usr/share/texlive/texmf-dist/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+)) (/usr/share/texlive/texmf-dist/tex/generic/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks23
+\SOUL@lasttoken=\toks24
+\SOUL@cmds=\toks25
+\SOUL@buffer=\toks26
+\SOUL@token=\toks27
+\SOUL@spaceskip=\skip49
+\SOUL@ttwidth=\dimen143
+\SOUL@uldp=\dimen144
+\SOUL@ulht=\dimen145
+) (/usr/share/texlive/texmf-dist/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+) (/usr/share/texlive/texmf-dist/tex/latex/was/gensymb.sty
+Package: gensymb 2003/07/02 v1.0 (WaS)
+) (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2022/05/22 v0.5v Insert pages of external PDF documents (AM)
+ (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count278
+\calc@Bcount=\count279
+\calc@Adimen=\dimen146
+\calc@Bdimen=\dimen147
+\calc@Askip=\skip50
+\calc@Bskip=\skip51
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count280
+\calc@Cskip=\skip52
+) (/usr/share/texlive/texmf-dist/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2020/10/14 v3.0a eso-pic (RN)
+\ESO@tempdima=\dimen148
+\ESO@tempdimb=\dimen149
+ (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 227.
+ (/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
+)) (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+\Gin@req@height=\dimen150
+\Gin@req@width=\dimen151
+)
+\AM@pagewidth=\dimen152
+\AM@pageheight=\dimen153
+\AM@fboxrule=\dimen154
+ (/usr/share/texlive/texmf-dist/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2022/05/22 v0.5v Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count281
+\AM@pagebox=\box55
+\AM@global@opts=\toks28
+\AM@pagecnt=\count282
+\AM@toc@title=\toks29
+\c@AM@survey=\count283
+\AM@templatesizebox=\box56
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
+ (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen155
+\captionmargin=\dimen156
+\caption@leftmargin=\dimen157
+\caption@rightmargin=\dimen158
+\caption@width=\dimen159
+\caption@indent=\dimen160
+\caption@parindent=\dimen161
+\caption@hangindent=\dimen162
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count284
+\c@continuedfloat=\count285
+Package caption Info: float package is loaded.
+Package caption Info: listings package is loaded.
+) (/usr/share/texlive/texmf-dist/tex/latex/caption/subcaption.sty
+Package: subcaption 2022/01/07 v1.5 Sub-captions (AR)
+\c@subfigure=\count286
+\c@subtable=\count287
+) (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+) (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+ (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+))
+\Gm@cnth=\count288
+\Gm@cntv=\count289
+\c@Gm@tempcnt=\count290
+\Gm@bindingoffset=\dimen163
+\Gm@wd@mp=\dimen164
+\Gm@odd@mp=\dimen165
+\Gm@even@mp=\dimen166
+\Gm@layoutwidth=\dimen167
+\Gm@layoutheight=\dimen168
+\Gm@layouthoffset=\dimen169
+\Gm@layoutvoffset=\dimen170
+\Gm@dimlist=\toks30
+) (/usr/share/texlive/texmf-dist/tex/latex/graphics/rotating.sty
+Package: rotating 2016/08/11 v2.16d rotated objects in LaTeX
+\c@r@tfl@t=\count291
+\rotFPtop=\skip53
+\rotFPbot=\skip54
+\rot@float@box=\box57
+\rot@mess@toks=\toks31
+) (/usr/share/texlive/texmf-dist/tex/latex/placeins/placeins.sty
+Package: placeins 2005/04/18  v 2.2
+) (/usr/share/texlive/texmf-dist/tex/latex/chngcntr/chngcntr.sty
+Package: chngcntr 2018/04/09 v1.1a change counter resetting
+Package chngcntr Info: \counterwithout already defined.
+(chngcntr)             Quitting chngcntr on input line 21.
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2022/03/10 v2.5f Tabular extension package (FMi)
+\col@sep=\dimen171
+\ar@mcellbox=\box58
+\extrarowheight=\dimen172
+\NC@list=\toks32
+\extratabsurround=\skip55
+\backup@length=\skip56
+\ar@cellbox=\box59
+) (/usr/share/texlive/texmf-dist/tex/generic/dirtree/dirtree.sty
+Package: dirtree 2012/12/11 v0.32 package wrapper for dirtree
+ (/usr/share/texlive/texmf-dist/tex/generic/dirtree/dirtree.tex `dirtree' v0.32, 2012/12/11 (jcc)
+\DT@offset=\dimen173
+\DT@width=\dimen174
+\DT@sep=\dimen175
+\DT@all=\dimen176
+\DT@rulewidth=\dimen177
+\DT@dotwidth=\dimen178
+\DTbaselineskip=\dimen179
+\DT@counti=\count292
+\DT@countii=\count293
+\DT@countiii=\count294
+\DT@countiv=\count295
+\DT@indent=\dimen180
+\DT@parskip=\dimen181
+\DT@baselineskip=\dimen182
+)
+File: dirtree.tex 2012/12/11 v0.32 `dirtree' (jcc)
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2022-06-20 v7.00s Hypertext links for LaTeX
+ (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/share/texlive/texmf-dist/tex/generic/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+) (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+ (/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+ (/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count296
+)
+\@linkdim=\dimen183
+\Hy@linkcounter=\count297
+\Hy@pagecounter=\count298
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2022-06-20 v7.00s Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+) (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+) (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+)
+\Hy@SavedSpaceFactor=\count299
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
+File: puenc.def 2022-06-20 v7.00s Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `breaklinks' set `true' on input line 4045.
+Package hyperref Info: Option `colorlinks' set `true' on input line 4045.
+Package hyperref Info: Option `bookmarks' set `true' on input line 4045.
+Package hyperref Info: Hyper figures OFF on input line 4162.
+Package hyperref Info: Link nesting OFF on input line 4167.
+Package hyperref Info: Hyper index ON on input line 4170.
+Package hyperref Info: Plain pages OFF on input line 4177.
+Package hyperref Info: Backreferencing OFF on input line 4182.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4408.
+\c@Hy@tempcnt=\count300
+LaTeX Info: Redefining \url on input line 4746.
+\XeTeXLinkMargin=\dimen184
+ (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO)
+))
+\Fld@menulength=\count301
+\Field@Width=\dimen185
+\Fld@charsize=\dimen186
+Package hyperref Info: Hyper figures OFF on input line 6024.
+Package hyperref Info: Link nesting OFF on input line 6029.
+Package hyperref Info: Hyper index ON on input line 6032.
+Package hyperref Info: backreferencing OFF on input line 6039.
+Package hyperref Info: Link coloring ON on input line 6042.
+Package hyperref Info: Link coloring with OCG OFF on input line 6049.
+Package hyperref Info: PDF/A mode OFF on input line 6054.
+ (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count302
+\c@Item=\count303
+\c@Hfootnote=\count304
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+ (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2022-06-20 v7.00s Hyperref driver for pdfTeX
+ (/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend package
+with kernel methods
+)
+\Fld@listcount=\count305
+\c@bookmark@seq@number=\count306
+ (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 285.
+)
+\Hy@SectionHShift=\skip57
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating environment
+\@float@every@algorithm=\toks33
+\c@algorithm=\count307
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+ (/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count308
+\c@ALG@rem=\count309
+\c@ALG@nested=\count310
+\ALG@tlm=\skip58
+\ALG@thistlm=\skip59
+\c@ALG@Lnr=\count311
+\c@ALG@blocknr=\count312
+\c@ALG@storecount=\count313
+\c@ALG@tmpcounter=\count314
+\ALG@tmplength=\skip60
+)
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2022/04/08 v2.17n AMS math features
+\@mathmargin=\skip61
+
+For additional information on amsmath, use the `?' option.
+(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks34
+\ex@=\dimen187
+)) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen188
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count315
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count316
+\leftroot@=\count317
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count318
+\DOTSCASE@=\count319
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box60
+\strutbox@=\box61
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen189
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count320
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count321
+\dotsspace@=\muskip17
+\c@parentequation=\count322
+\dspbrk@lvl=\count323
+\tag@help=\toks35
+\row@=\count324
+\column@=\count325
+\maxfields@=\count326
+\andhelp@=\toks36
+\eqnshift@=\dimen190
+\alignsep@=\dimen191
+\tagshift@=\dimen192
+\tagwidth@=\dimen193
+\totwidth@=\dimen194
+\lineht@=\dimen195
+\@envbody=\toks37
+\multlinegap=\skip62
+\multlinetaggap=\skip63
+\mathdisplay@stack=\toks38
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+) (/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
+)
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... none found.
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 57.
+ (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2022-07-01 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count327
+\l__pdf_internal_box=\box62
+) (./report.aux)
+\openout1 = `report.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 57.
+LaTeX Font Info:    ... okay on input line 57.
+\c@lstlisting=\count328
+ (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count329
+\scratchdimen=\dimen196
+\scratchbox=\box63
+\nofMPsegments=\count330
+\nofMParguments=\count331
+\everyMPshowfont=\toks39
+\MPscratchCnt=\count332
+\MPscratchDim=\dimen197
+\MPnumerator=\count333
+\makeMPintoPDFobject=\count334
+\everyMPtoPDFconversion=\toks40
+) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+\symgns@font=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
+(Font)                  TS1/lmr/m/n --> TS1/lmr/b/n on input line 57.
+Package gensymb Info: Math companion symbols declared on input line 57.
+LaTeX Info: Redefining \degree on input line 57.
+LaTeX Info: Redefining \celsius on input line 57.
+Package gensymb Info: Using text companion symbols for \degree, \celsius and \perthousand on input line 57.
+LaTeX Info: Redefining \ohm on input line 57.
+Package gensymb Info: Using \textohm for \ohm on input line 57.
+Package gensymb Info: Using \textmu for \micro on input line 57.
+ (/usr/share/texlive/texmf-dist/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2019/12/05 v0.12 Display of landscape pages in PDF (HO)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+)
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: hyperref package is loaded.
+Package caption Info: rotating package is loaded.
+Package caption Info: End \AtBeginDocument code.
+
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 472.03123pt, 71.13188pt)
+* v-part:(T,H,B)=(85.35826pt, 624.25346pt, 85.35826pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=472.03123pt
+* \textheight=624.25346pt
+* \oddsidemargin=-1.1381pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-23.91173pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=4.0pt
+* \marginparsep=10.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumntrue
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+Package hyperref Info: Link coloring ON on input line 57.
+(./report.out) (./report.out)
+\@outlinefile=\write3
+\openout3 = `report.out'.
+
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 59.
+ (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 59.
+ (/usr/share/texmf/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 59.
+ (/usr/share/texmf/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 59.
+ (/usr/share/texmf/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 59.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 59.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+ (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 59.
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+) (./report.toc
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 3.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 3.
+)
+\tf@toc=\write4
+\openout4 = `report.toc'.
+
+ [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+
+
+]
+Underfull \hbox (badness 10000) in paragraph at lines 87--88
+[]\T1/lmr/m/n/10 Get an op-ti-mal pol-icy: $\OML/lmm/m/it/10 ^^Y[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 s\OT1/lmr/m/n/10 ) =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 93--94
+[]\T1/lmr/m/n/10 Improve the pol-icy: $\OML/lmm/m/it/10 ^^Y[]\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 s\OT1/lmr/m/n/10 ) =
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--103
+[]$\OML/lmm/m/it/10 Q\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 s; a\OT1/lmr/m/n/10 ) = (1 \OMS/lmsy/m/n/10 ^^@ \OML/lmm/m/it/10 \OT1/lmr/m/n/10 )\OML/lmm/m/it/10 Q\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 s; a\OT1/lmr/m/n/10 ) + \OML/lmm/m/it/10 \OT1/lmr/m/n/10 (\OML/lmm/m/it/10 r \OT1/lmr/m/n/10 +
+ []
+
+
+Underfull \hbox (badness 4181) in paragraph at lines 102--103
+\OML/lmm/m/it/10 ^^Mmax[]Q\OT1/lmr/m/n/10 (\OML/lmm/m/it/10 s[]; a[]\OT1/lmr/m/n/10 ))$ \T1/lmr/m/n/10 : Q-Learning up-date
+ []
+
+
+Underfull \hbox (badness 6825) in paragraph at lines 107--108
+[]\T1/lmr/m/n/10 Act and ob-serve an ex-pe-ri-ence tu-ple $\OML/lmm/m/it/10 <
+ []
+
+[2]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 146.
+
+<../graphics/GridWorld_size_iterations.png, id=100, 607.26875pt x 341.275pt>
+File: ../graphics/GridWorld_size_iterations.png Graphic file (type png)
+<use ../graphics/GridWorld_size_iterations.png>
+Package pdftex.def Info: ../graphics/GridWorld_size_iterations.png  used on input line 150.
+(pdftex.def)             Requested size: 161.90782pt x 90.98943pt.
+<../graphics/GridWorld_probability_iterations.png, id=102, 607.26875pt x 342.27875pt>
+File: ../graphics/GridWorld_probability_iterations.png Graphic file (type png)
+<use ../graphics/GridWorld_probability_iterations.png>
+Package pdftex.def Info: ../graphics/GridWorld_probability_iterations.png  used on input line 156.
+(pdftex.def)             Requested size: 161.90782pt x 91.25703pt.
+<../graphics/GridWorld_obstacles_iterations.png, id=103, 607.26875pt x 342.27875pt>
+File: ../graphics/GridWorld_obstacles_iterations.png Graphic file (type png)
+<use ../graphics/GridWorld_obstacles_iterations.png>
+Package pdftex.def Info: ../graphics/GridWorld_obstacles_iterations.png  used on input line 162.
+(pdftex.def)             Requested size: 161.90782pt x 91.25703pt.
+<../graphics/GridWorld_reward_iterations.png, id=104, 607.26875pt x 342.27875pt>
+File: ../graphics/GridWorld_reward_iterations.png Graphic file (type png)
+<use ../graphics/GridWorld_reward_iterations.png>
+Package pdftex.def Info: ../graphics/GridWorld_reward_iterations.png  used on input line 168.
+(pdftex.def)             Requested size: 161.90782pt x 91.25703pt.
+<../graphics/GridWorld_discount_iterations.png, id=105, 607.26875pt x 342.27875pt>
+File: ../graphics/GridWorld_discount_iterations.png Graphic file (type png)
+<use ../graphics/GridWorld_discount_iterations.png>
+Package pdftex.def Info: ../graphics/GridWorld_discount_iterations.png  used on input line 174.
+(pdftex.def)             Requested size: 161.90782pt x 91.25703pt.
+[3 <../graphics/GridWorld_size_iterations.png> <../graphics/GridWorld_probability_iterations.png> <../graphics/GridWorld_obstacles_iterations.png> <../graphics/GridWorld_reward_iterations.png> <../graphics/GridWorld_discount_iterations.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 186.
+
+<../graphics/GridWorld_20_vi_size.png, id=121, 813.0375pt x 856.19875pt>
+File: ../graphics/GridWorld_20_vi_size.png Graphic file (type png)
+<use ../graphics/GridWorld_20_vi_size.png>
+Package pdftex.def Info: ../graphics/GridWorld_20_vi_size.png  used on input line 190.
+(pdftex.def)             Requested size: 113.29008pt x 119.29216pt.
+<../graphics/GridWorld_20_pi_size.png, id=122, 813.0375pt x 856.19875pt>
+File: ../graphics/GridWorld_20_pi_size.png Graphic file (type png)
+<use ../graphics/GridWorld_20_pi_size.png>
+Package pdftex.def Info: ../graphics/GridWorld_20_pi_size.png  used on input line 196.
+(pdftex.def)             Requested size: 113.29008pt x 119.29216pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 210.
+
+<../graphics/GridWorld_0.6_vi_prob.png, id=125, 813.0375pt x 856.19875pt>
+File: ../graphics/GridWorld_0.6_vi_prob.png Graphic file (type png)
+<use ../graphics/GridWorld_0.6_vi_prob.png>
+Package pdftex.def Info: ../graphics/GridWorld_0.6_vi_prob.png  used on input line 214.
+(pdftex.def)             Requested size: 113.29008pt x 119.29216pt.
+<../graphics/GridWorld_0.6_pi_prob.png, id=126, 813.0375pt x 856.19875pt>
+File: ../graphics/GridWorld_0.6_pi_prob.png Graphic file (type png)
+<use ../graphics/GridWorld_0.6_pi_prob.png>
+Package pdftex.def Info: ../graphics/GridWorld_0.6_pi_prob.png  used on input line 220.
+(pdftex.def)             Requested size: 113.29008pt x 119.29216pt.
+[4 <../graphics/GridWorld_20_vi_size.png> <../graphics/GridWorld_20_pi_size.png> <../graphics/GridWorld_0.6_vi_prob.png> <../graphics/GridWorld_0.6_pi_prob.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 232.
+
+<../graphics/GridWorld_0.2_vi_wallpercent.png, id=143, 813.0375pt x 856.19875pt>
+File: ../graphics/GridWorld_0.2_vi_wallpercent.png Graphic file (type png)
+<use ../graphics/GridWorld_0.2_vi_wallpercent.png>
+Package pdftex.def Info: ../graphics/GridWorld_0.2_vi_wallpercent.png  used on input line 236.
+(pdftex.def)             Requested size: 113.29008pt x 119.29216pt.
+<../graphics/GridWorld_0.2_pi_wallpercent.png, id=144, 813.0375pt x 856.19875pt>
+File: ../graphics/GridWorld_0.2_pi_wallpercent.png Graphic file (type png)
+<use ../graphics/GridWorld_0.2_pi_wallpercent.png>
+Package pdftex.def Info: ../graphics/GridWorld_0.2_pi_wallpercent.png  used on input line 242.
+(pdftex.def)             Requested size: 113.29008pt x 119.29216pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 258.
+
+<../graphics/GridWorld_3.0_vi_reward.png, id=147, 813.0375pt x 856.19875pt>
+File: ../graphics/GridWorld_3.0_vi_reward.png Graphic file (type png)
+<use ../graphics/GridWorld_3.0_vi_reward.png>
+Package pdftex.def Info: ../graphics/GridWorld_3.0_vi_reward.png  used on input line 262.
+(pdftex.def)             Requested size: 113.29008pt x 119.29216pt.
+<../graphics/GridWorld_3.0_pi_reward.png, id=148, 813.0375pt x 856.19875pt>
+File: ../graphics/GridWorld_3.0_pi_reward.png Graphic file (type png)
+<use ../graphics/GridWorld_3.0_pi_reward.png>
+Package pdftex.def Info: ../graphics/GridWorld_3.0_pi_reward.png  used on input line 268.
+(pdftex.def)             Requested size: 113.29008pt x 119.29216pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 280.
+
+<../graphics/GridWorld_0.9_vi_discount.png, id=151, 813.0375pt x 856.19875pt>
+File: ../graphics/GridWorld_0.9_vi_discount.png Graphic file (type png)
+<use ../graphics/GridWorld_0.9_vi_discount.png>
+Package pdftex.def Info: ../graphics/GridWorld_0.9_vi_discount.png  used on input line 284.
+(pdftex.def)             Requested size: 113.29008pt x 119.29216pt.
+<../graphics/GridWorld_0.9_pi_discount.png, id=152, 813.0375pt x 856.19875pt>
+File: ../graphics/GridWorld_0.9_pi_discount.png Graphic file (type png)
+<use ../graphics/GridWorld_0.9_pi_discount.png>
+Package pdftex.def Info: ../graphics/GridWorld_0.9_pi_discount.png  used on input line 290.
+(pdftex.def)             Requested size: 113.29008pt x 119.29216pt.
+[5 <../graphics/GridWorld_0.2_vi_wallpercent.png> <../graphics/GridWorld_0.2_pi_wallpercent.png> <../graphics/GridWorld_3.0_vi_reward.png> <../graphics/GridWorld_3.0_pi_reward.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 309.
+
+<../graphics/BlockDude_level_iterations.png, id=167, 607.26875pt x 341.275pt>
+File: ../graphics/BlockDude_level_iterations.png Graphic file (type png)
+<use ../graphics/BlockDude_level_iterations.png>
+Package pdftex.def Info: ../graphics/BlockDude_level_iterations.png  used on input line 313.
+(pdftex.def)             Requested size: 161.90782pt x 90.98943pt.
+<../graphics/BlockDude_reward_iterations.png, id=168, 607.26875pt x 341.275pt>
+File: ../graphics/BlockDude_reward_iterations.png Graphic file (type png)
+<use ../graphics/BlockDude_reward_iterations.png>
+Package pdftex.def Info: ../graphics/BlockDude_reward_iterations.png  used on input line 319.
+(pdftex.def)             Requested size: 161.90782pt x 90.98943pt.
+<../graphics/BlockDude_discount_iterations.png, id=169, 607.26875pt x 341.275pt>
+File: ../graphics/BlockDude_discount_iterations.png Graphic file (type png)
+<use ../graphics/BlockDude_discount_iterations.png>
+Package pdftex.def Info: ../graphics/BlockDude_discount_iterations.png  used on input line 325.
+(pdftex.def)             Requested size: 161.90782pt x 90.98943pt.
+[6 <../graphics/GridWorld_0.9_vi_discount.png> <../graphics/GridWorld_0.9_pi_discount.png> <../graphics/BlockDude_level_iterations.png> <../graphics/BlockDude_reward_iterations.png> <../graphics/BlockDude_discount_iterations.png>] [7]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 360.
+
+<../graphics/GridWorld_qinit_time.png, id=198, 607.26875pt x 342.27875pt>
+File: ../graphics/GridWorld_qinit_time.png Graphic file (type png)
+<use ../graphics/GridWorld_qinit_time.png>
+Package pdftex.def Info: ../graphics/GridWorld_qinit_time.png  used on input line 364.
+(pdftex.def)             Requested size: 231.2979pt x 130.36496pt.
+<../graphics/GridWorld_epsilon_time.png, id=199, 607.26875pt x 341.275pt>
+File: ../graphics/GridWorld_epsilon_time.png Graphic file (type png)
+<use ../graphics/GridWorld_epsilon_time.png>
+Package pdftex.def Info: ../graphics/GridWorld_epsilon_time.png  used on input line 370.
+(pdftex.def)             Requested size: 231.2979pt x 129.98267pt.
+<../graphics/GridWorld_rate_time.png, id=200, 607.26875pt x 342.27875pt>
+File: ../graphics/GridWorld_rate_time.png Graphic file (type png)
+<use ../graphics/GridWorld_rate_time.png>
+Package pdftex.def Info: ../graphics/GridWorld_rate_time.png  used on input line 376.
+(pdftex.def)             Requested size: 231.2979pt x 130.36496pt.
+[8 <../graphics/GridWorld_qinit_time.png> <../graphics/GridWorld_epsilon_time.png> <../graphics/GridWorld_rate_time.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 390.
+
+<../graphics/GridWorld_0.3_Q_reward.png, id=211, 501.875pt x 501.875pt>
+File: ../graphics/GridWorld_0.3_Q_reward.png Graphic file (type png)
+<use ../graphics/GridWorld_0.3_Q_reward.png>
+Package pdftex.def Info: ../graphics/GridWorld_0.3_Q_reward.png  used on input line 394.
+(pdftex.def)             Requested size: 113.29008pt x 113.28458pt.
+<../graphics/GridWorld_30_Q_rewards.png, id=212, 501.875pt x 501.875pt>
+File: ../graphics/GridWorld_30_Q_rewards.png Graphic file (type png)
+<use ../graphics/GridWorld_30_Q_rewards.png>
+Package pdftex.def Info: ../graphics/GridWorld_30_Q_rewards.png  used on input line 400.
+(pdftex.def)             Requested size: 113.29008pt x 113.28458pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 408.
+
+<../graphics/GridWorld_0.05_E_rewards.png, id=213, 501.875pt x 501.875pt>
+File: ../graphics/GridWorld_0.05_E_rewards.png Graphic file (type png)
+<use ../graphics/GridWorld_0.05_E_rewards.png>
+Package pdftex.def Info: ../graphics/GridWorld_0.05_E_rewards.png  used on input line 412.
+(pdftex.def)             Requested size: 113.29008pt x 113.28458pt.
+<../graphics/GridWorld_0.8_E_rewards.png, id=214, 501.875pt x 501.875pt>
+File: ../graphics/GridWorld_0.8_E_rewards.png Graphic file (type png)
+<use ../graphics/GridWorld_0.8_E_rewards.png>
+Package pdftex.def Info: ../graphics/GridWorld_0.8_E_rewards.png  used on input line 418.
+(pdftex.def)             Requested size: 113.29008pt x 113.28458pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 427.
+
+<../graphics/BlockDude_time_q.png, id=215, 607.26875pt x 342.27875pt>
+File: ../graphics/BlockDude_time_q.png Graphic file (type png)
+<use ../graphics/BlockDude_time_q.png>
+Package pdftex.def Info: ../graphics/BlockDude_time_q.png  used on input line 431.
+(pdftex.def)             Requested size: 231.2979pt x 130.36496pt.
+<../graphics/BlockDude_time_epsilon.png, id=216, 607.26875pt x 342.27875pt>
+File: ../graphics/BlockDude_time_epsilon.png Graphic file (type png)
+<use ../graphics/BlockDude_time_epsilon.png>
+Package pdftex.def Info: ../graphics/BlockDude_time_epsilon.png  used on input line 437.
+(pdftex.def)             Requested size: 231.2979pt x 130.36496pt.
+<../graphics/BlockDude_time_rate.png, id=217, 607.26875pt x 342.27875pt>
+File: ../graphics/BlockDude_time_rate.png Graphic file (type png)
+<use ../graphics/BlockDude_time_rate.png>
+Package pdftex.def Info: ../graphics/BlockDude_time_rate.png  used on input line 443.
+(pdftex.def)             Requested size: 231.2979pt x 130.36496pt.
+[9 <../graphics/GridWorld_0.3_Q_reward.png> <../graphics/GridWorld_30_Q_rewards.png> <../graphics/GridWorld_0.05_E_rewards.png> <../graphics/GridWorld_0.8_E_rewards.png> <../graphics/BlockDude_time_q.png> <../graphics/BlockDude_time_epsilon.png> <../graphics/BlockDude_time_rate.png>]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 455.
+
+<../graphics/BlockDude_0.3_q.png, id=237, 501.875pt x 501.875pt>
+File: ../graphics/BlockDude_0.3_q.png Graphic file (type png)
+<use ../graphics/BlockDude_0.3_q.png>
+Package pdftex.def Info: ../graphics/BlockDude_0.3_q.png  used on input line 459.
+(pdftex.def)             Requested size: 113.29008pt x 113.28458pt.
+<../graphics/BlockDude_30_q.png, id=238, 501.875pt x 501.875pt>
+File: ../graphics/BlockDude_30_q.png Graphic file (type png)
+<use ../graphics/BlockDude_30_q.png>
+Package pdftex.def Info: ../graphics/BlockDude_30_q.png  used on input line 465.
+(pdftex.def)             Requested size: 113.29008pt x 113.28458pt.
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `tbp') on input line 473.
+
+<../graphics/BlockDude_0.05_epsilon.png, id=239, 501.875pt x 501.875pt>
+File: ../graphics/BlockDude_0.05_epsilon.png Graphic file (type png)
+<use ../graphics/BlockDude_0.05_epsilon.png>
+Package pdftex.def Info: ../graphics/BlockDude_0.05_epsilon.png  used on input line 477.
+(pdftex.def)             Requested size: 113.29008pt x 113.28458pt.
+<../graphics/BlockDude_0.8_epsilon.png, id=240, 501.875pt x 501.875pt>
+File: ../graphics/BlockDude_0.8_epsilon.png Graphic file (type png)
+<use ../graphics/BlockDude_0.8_epsilon.png>
+Package pdftex.def Info: ../graphics/BlockDude_0.8_epsilon.png  used on input line 483.
+(pdftex.def)             Requested size: 113.29008pt x 113.28458pt.
+[10 <../graphics/BlockDude_0.3_q.png> <../graphics/BlockDude_30_q.png> <../graphics/BlockDude_0.05_epsilon.png> <../graphics/BlockDude_0.8_epsilon.png>] (./report.aux)
+Package rerunfilecheck Info: File `report.out' has not changed.
+(rerunfilecheck)             Checksum: 8C2FD69D3AD92992A9BF332AD9A793EA;1733.
+ ) 
+Here is how much of TeX's memory you used:
+ 16935 strings out of 478023
+ 275123 string characters out of 5841207
+ 592951 words of memory out of 5000000
+ 35006 multiletter control sequences out of 15000+600000
+ 525097 words of font info for 76 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 72i,9n,77p,1830b,578s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy5.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb>
+Output written on report.pdf (10 pages, 1361056 bytes).
+PDF statistics:
+ 335 PDF objects out of 1000 (max. 8388607)
+ 226 compressed objects within 3 object streams
+ 63 named destinations out of 1000 (max. 500000)
+ 249 words of extra memory for PDF output out of 10000 (max. 10000000)
+
